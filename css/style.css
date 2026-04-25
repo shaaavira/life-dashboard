@@ -1,0 +1,160 @@
+body {
+    font-family: 'Fredoka', poppins;
+    background-color: #fff3b0;
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Cellipse cx='70' cy='100' rx='50' ry='60' fill='%23fff7e6'/%3E%3Ccircle cx='70' cy='100' r='28' fill='%23ffb703'/%3E%3Cpath d='M58 92 Q62 98 66 92' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cpath d='M74 92 Q78 98 82 92' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cpath d='M55 105 Q70 125 85 105' stroke='%23000' stroke-width='3' fill='none'/%3E%3Cellipse cx='190' cy='170' rx='50' ry='60' fill='%23fff7e6'/%3E%3Ccircle cx='190' cy='170' r='28' fill='%23ffb703'/%3E%3Cpath d='M178 162 Q182 168 186 162' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cpath d='M194 162 Q198 168 202 162' stroke='%23000' stroke-width='2' fill='none'/%3E%3Cpath d='M175 175 Q190 195 205 175' stroke='%23000' stroke-width='3' fill='none'/%3E%3Ccircle cx='130' cy='70' r='30' fill='%23ffd60a'/%3E%3Ccircle cx='118' cy='65' r='4' fill='%23000'/%3E%3Ccircle cx='142' cy='65' r='4' fill='%23000'/%3E%3Cpath d='M120 80 Q130 90 140 80' stroke='%23000' stroke-width='3' fill='none'/%3E%3Cpolygon points='126,72 134,72 130,78' fill='%23ff8800'/%3E%3Cellipse cx='112' cy='82' rx='10' ry='6' fill='%23ffe066'/%3E%3Cellipse cx='148' cy='82' rx='10' ry='6' fill='%23ffe066'/%3E%3Ccircle cx='40' cy='200' r='20' fill='%23ffd60a'/%3E%3Ccircle cx='34' cy='195' r='3' fill='%23000'/%3E%3Ccircle cx='46' cy='195' r='3' fill='%23000'/%3E%3Cpath d='M35 205 Q40 210 45 205' stroke='%23000' stroke-width='2' fill='none'/%3E%3Ccircle cx='30' cy='30' r='4' fill='%23ffd166'/%3E%3Ccircle cx='230' cy='40' r='4' fill='%23ffd166'/%3E%3Ccircle cx='50' cy='230' r='4' fill='%23ffd166'/%3E%3C/svg%3E");
+
+    background-size: 60px 60px;
+    margin: 0;
+}
+
+.container {
+    max-width: 650px;
+    margin: auto;
+    padding: 15px;
+}
+
+
+.card {
+    background: #fff8dc;
+    border-radius: 16px;
+    padding: 12px;
+    margin-bottom: 8px;
+    box-shadow: 0 6px 10px rgba(255, 180, 0, 0.25);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+#time, #timer {
+    color: #fb8500; 
+    text-shadow: 
+        2px 2px 0 #fff,
+        0 0 8px rgba(255, 183, 0, 0.8),
+        0 0 8px rgba(255, 140, 0, 0.6);
+        text-align: center;   
+}
+
+h1 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+h2 {
+    color: #fb8500;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #ffd166, #ffb703);
+    color: #5a3d00;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ffb703, #fb8500);
+}
+
+input {
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+    margin-right: 5px;
+}
+
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background: #fff1b6;
+    padding: 8px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #fff3b0, #fff3b0);
+    color: #5a3d00;
+    text-decoration: none;
+}
+
+.link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.delete-link-btn {
+    background: transparent !important;
+    border: none;
+    cursor: pointer;
+}
+.timer-buttons {
+    display: flex;
+    justify-content: center; /* 🔥 ini bikin ke tengah */
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+#date {
+    font-family: 'Fredoka', sans-serif;
+    color: #fb8500;
+    font-size: 16px; /* samakan dengan h2 kalau perlu */
+    font-weight: bold;
+    text-align: center;
+}
+.row {
+    display: flex;
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Biar card di dalam row fleksibel */
+.row .card {
+    flex: 1;
+}
+
+/* Timer sedikit lebih gede (opsional biar cakep) */
+.timer-card {
+    flex: 1.2;
+}
+
+/* Responsive (HP jadi atas-bawah lagi) */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+}
+.main-title {
+    text-align: center;
+    color: #fb8500;
+    font-size: 24 px;
+    background: #fff8dc;
+    border-radius: 26px;
+    padding: 12px;
+    margin-bottom: 10px;
+
+    text-shadow:
+        2px 2px 0 #fff,
+        0 0 10px rgba(255, 183, 0, 0.6);
+}

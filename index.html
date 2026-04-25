@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Egg Dashboard 🍳</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+<h1 class="main-title">Hello, Egg-cellent friend 🫶🏻🐣</h1>
+
+    <div class="card">
+    <h2>⏰ Clock and Date</h2>
+    <h1 id="time"> 00:00</h1>
+    <p id="date"></p>
+
+    <!-- GREETING + NAMA -->
+    <h2 id="greeting">
+        "greeting" + <span id="nameDisplay">Guest</span>
+    </h2>
+
+    <!-- INPUT CUSTOM NAME -->
+    <div style="margin-top:10px;">
+        <input type="text" id="nameInput" placeholder="Your name..." />
+        <button onclick="saveName()">Save</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="card timer-card">
+        <div>
+            <h2>🍳 Focus Timer</h2>
+            <h1 id="timer">25:00</h1>
+        </div>
+
+        <!-- 🔥 INPUT CUSTOM TIMER -->
+    <div style="margin-top:15px; text-align:center;">
+        <input type="number" id="customMinutes" placeholder="Minutes" min="1">
+        <button onclick="setCustomTimer()">Set</button>
+    </div>
+
+        <div class="timer-buttons">
+            <button onclick="startTimer()">▶ Start</button>
+            <button onclick="stopTimer()">⏸ Stop</button>
+            <button onclick="resetTimer()">🔄 Reset</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🌻 Tasks</h2>
+<input type="text" id="taskInput" placeholder="Add something cute ✨💛">
+        <button onclick="addTask()">➕ Add</button>
+        <ul id="taskList"></ul>
+    </div>
+</div>
+
+    <div class="card">
+        <h2>🐥 Quick Links</h2>
+        <input type="text" id="linkName" placeholder="Name">
+        <input type="text" id="linkURL" placeholder="URL">
+        <button onclick="addLink()">✨ Add Link</button>
+        <div id="links"></div>
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
