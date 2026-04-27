@@ -464,4 +464,38 @@ body.dark #themeToggle {
     #links a {
         display: inline-flex;
     }
+
+    #time {
+        font-size: 34px !important;
+        font-weight: 800;
+    }
+
+    /* =========================
+       GREETING / MY FRIEND (LEBIH KECIL)
+    ========================= */
+    #greeting {
+        font-size: 12px !important;
+        font-weight: 500;
+    }
+
+    #nameDisplay {
+        font-size: 14px !important;
+        font-weight: 600;
+    }
+
+    /* =========================
+       INPUT NAME (DIPERKECIL)
+    ========================= */
+    #nameInput {
+        width: 60% !important;
+        padding: 6px;
+        font-size: 14px;
+    }
+
+    /* tombol Save biar seimbang */
+    #clockCard button {
+        width: auto !important;
+        padding: 6px 10px;
+    }
 }
+
