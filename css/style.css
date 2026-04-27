@@ -437,4 +437,40 @@ body.dark #themeToggle {
     .timer-buttons button {
         min-width: 80px;
     }
+    .card input {
+        width: 75% !important;
+        max-width: 260px !important;
+        display: block !important;
+        margin: 6px auto !important;
+        text-align: center !important;
+    }
+
+    /* tombol tetap rapi */
+    .card button {
+        width: auto !important;
+        display: inline-block !important;
+    }
+
+    /* khusus biar input tidak dipaksa full */
+    input {
+        width: auto !important;
+        max-width: 100% !important;
+    }
+    #clockCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        flex-wrap: nowrap;
+    }
+    
+    #clockCard input {
+        width: 60% !important;
+        max-width: 200px;
+    }
+    
+    #clockCard button {
+        margin: 0 !important;
+        white-space: nowrap;
+    }
 }
