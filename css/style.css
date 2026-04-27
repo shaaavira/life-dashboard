@@ -316,3 +316,35 @@ body.dark #themeToggle {
     background: #ffe0ba !important;
     color: #4a2a18 !important;
 }
+/* MOBILE POLISH */
+@media (max-width: 768px) {
+
+    .main-title {
+        font-size: 18px;
+    }
+
+    #time {
+        font-size: 32px;
+    }
+
+    #date {
+        font-size: 14px;
+    }
+
+    #greeting {
+        font-size: 16px;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .timer-buttons {
+        flex-direction: column;
+    }
+}
