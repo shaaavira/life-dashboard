@@ -6,7 +6,7 @@ body {
     font-family: 'Fredoka', poppins;
     background-color: #fff3b0;
 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3C!-- putih telur organic --%3E%3Cpath d='M30 60 Q28 35 50 30 Q70 25 85 40 Q95 50 88 70 Q80 90 55 88 Q35 85 30 60 Z' fill='%23fff8dc'/%3E%3C!-- kuning telur --%3E%3Ccircle cx='60' cy='60' r='16' fill='%23ffd166'/%3E%3C!-- mata kiri --%3E%3Ccircle cx='54' cy='55' r='3.2' fill='%233c2417'/%3E%3Ccircle cx='55' cy='54' r='1.2' fill='white'/%3E%3C!-- mata kanan --%3E%3Ccircle cx='66' cy='55' r='3.2' fill='%233c2417'/%3E%3Ccircle cx='67' cy='54' r='1.2' fill='white'/%3E%3C!-- pipi blush --%3E%3Ccircle cx='47' cy='65' r='3.5' fill='%23ff9aa2' opacity='0.75'/%3E%3Ccircle cx='73' cy='65' r='3.5' fill='%23ff9aa2' opacity='0.75'/%3E%3C!-- senyum ketawa --%3E%3Cpath d='M50 67 Q60 78 70 67 Q65 75 60 75 Q55 75 50 67 Z' fill='%233c2417'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='55' cy='54' r='1' fill='white'/%3E%3Ccircle cx='67' cy='54' r='1' fill='white'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ff9aa2'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ff9aa2'/%3E%3Cpath d='M52 67 Q60 78 68 67 Q64 75 60 75 Q56 75 52 67 Z' fill='%233c2417'/%3E%3C/svg%3E");
 
     background-size: 65px 65px;
     margin: 0;
