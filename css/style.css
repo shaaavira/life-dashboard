@@ -222,12 +222,78 @@ body.dark button {
     font-weight: 600;
 }
 
+/* =======================
+   DARK MODE COZY BROWN 🤎
+======================= */
+
+body.dark {
+    background: linear-gradient(135deg, #3b281f, #4b3428, #5c4033);
+    color: #fffaf5;
+    background-image: none;
+}
+
+body.dark .main-title {
+    background: #5b4031;
+    color: #ffe7c2;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+body.dark .card {
+    background: #6a4a39;
+    color: #fffaf5;
+    border: none;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark p,
+body.dark span,
+body.dark li,
+body.dark label {
+    color: #fffaf5;
+}
+
+body.dark h2 {
+    color: #ffd89e;
+}
+
+body.dark #time,
+body.dark #timer {
+    color: #ffd89e;
+    text-shadow: 0 0 10px rgba(255, 210, 140, 0.35);
+}
+
+body.dark #date {
+    color: #ffe7c2;
+}
+
+body.dark li {
+    background: #7a5744;
+}
+
+body.dark input {
+    background: #8a6650;
+    color: #ffffff;
+    border: none;
+}
+
+body.dark input::placeholder {
+    color: #f2dbc5;
+}
+
+body.dark button {
+    background: linear-gradient(135deg, #d9a066, #c98742);
+    color: #2f1a0f;
+    font-weight: 600;
+}
+
 body.dark button:hover {
     background: linear-gradient(135deg, #e5b17a, #d79652);
 }
 
 body.dark #links a {
-    background: rgba(255,255,255,0.06);
+    background: #7a5744;
     color: #ffe7c2;
 }
 
@@ -235,6 +301,7 @@ body.dark #themeToggle {
     background: #f5d2a5;
     color: #4a2b1a;
 }
+
 /* =======================
    THEME BUTTON POSITION
 ======================= */
@@ -247,8 +314,6 @@ body.dark #themeToggle {
     width: 48px;
     height: 48px;
     border-radius: 50%;
-}
-
     transition: all 0.25s ease;
 }
 
