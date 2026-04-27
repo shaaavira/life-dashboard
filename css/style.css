@@ -212,49 +212,67 @@ body.dark input {
 }
 
 body.dark input::placeholder {
-    color: #f7d7df !important;
+/* =======================
+   DARK MODE - ROSE NIGHT
+======================= */
+
+body.dark {
+    background: linear-gradient(135deg,#4a323a,#5a3d47,#3a272e) !important;
+    color: #fff6f8 !important;
+    background-image: none !important;
+}
+
+body.dark .card,
+body.dark .main-title {
+    background: rgba(255,255,255,0.10) !important;
+    color: #fff6f8 !important;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark p,
+body.dark span,
+body.dark li {
+    color: #fff6f8 !important;
+}
+
+body.dark #time,
+body.dark #timer {
+    color: #ffd6df !important;
+}
+
+body.dark li {
+    background: rgba(255,255,255,0.07) !important;
+}
+
+body.dark input {
+    background: rgba(255,255,255,0.12) !important;
+    color: white !important;
 }
 
 body.dark button {
-    background: linear-gradient(135deg, #ffbfd0, #ff9eb8) !important;
+    background: #ffb6c1 !important;
     color: #4a2330 !important;
-    font-weight: 600;
-}
-
-body.dark button:hover {
-    background: linear-gradient(135deg, #ffcddd, #ffb3c7) !important;
-}
-
-body.dark #links a {
-    background: rgba(255,255,255,0.08) !important;
-    color: #ffe4ec !important;
 }
 
 body.dark #themeToggle {
     background: #ffe4ec !important;
     color: #5a2e3c !important;
 }
-=======================
+
+/* =======================
    THEME BUTTON POSITION
-======================= 
+======================= */
 
 #themeToggle {
     position: fixed;
     top: 20px;
     right: 20px;
     z-index: 999;
-
     width: 48px;
     height: 48px;
-    border: none;
     border-radius: 50%;
-
-    font-size: 20px;
-    cursor: pointer;
-
-    background: #fff4c9;
-    color: #5a3d00;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
 
     transition: all 0.25s ease;
 }
