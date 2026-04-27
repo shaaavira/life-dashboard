@@ -321,67 +321,96 @@ body.dark #themeToggle {
 
     .container {
         max-width: 100%;
-        padding: 12px;
+        padding: 14px;
     }
 
     .row {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
     }
 
     .card {
         width: 100%;
-        padding: 14px;
+        padding: 16px;
         box-sizing: border-box;
     }
 
-    .main-title {
-        font-size: 18px;
+    /* =========================
+       TYPOGRAPHY (BIAR GA DEMPET)
+    ========================= */
+
+    h1 {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+
+    h2 {
+        font-size: 15px;
+        margin: 6px 0;
     }
 
     #time {
-        font-size: 34px;
+        font-size: 32px;
     }
 
     #date {
         font-size: 14px;
+        margin-bottom: 6px;
     }
 
     #greeting {
-        font-size: 16px;
+        font-size: 15px;
+        margin-top: 6px;
     }
 
-    /* 🔥 FIX INPUT GROUP */
+    /* =========================
+       🔥 INPUT GROUP FIX TOTAL
+    ========================= */
+
     .input-group {
         display: flex;
         flex-direction: column;
-        gap: 6px;
+        gap: 8px;
+        width: 100%;
     }
 
     .input-group input,
     .input-group button {
         width: 100%;
+        box-sizing: border-box; /* 🔥 ini penting biar ga keluar */
     }
 
-    /* TIMER BUTTON */
+    input {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* =========================
+       TIMER BUTTON
+    ========================= */
+
     .timer-buttons {
         flex-direction: column;
-        gap: 6px;
+        gap: 8px;
     }
 
-    /* LINKS */
+    .timer-buttons button {
+        width: 100%;
+    }
+
+    /* =========================
+       LINKS
+    ========================= */
+
     #links a {
         display: block;
         text-align: center;
-    }
-}
-    .timer-buttons {
-        flex-direction: column;
-        gap: 6px;
+        margin: 6px 0;
     }
 
-    #links a {
-        display: block;
-        text-align: center;
-    }
 }
