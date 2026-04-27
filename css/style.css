@@ -552,4 +552,25 @@ body.dark #themeToggle {
         background: linear-gradient(135deg,#efbf86,#d69155) !important;
         color: #3c2417 !important;
     }
+    @media (max-width: 768px) {
+
+  /* TASK INPUT */
+  #taskInput {
+    width: 75% !important;
+    max-width: 280px;
+    display: block;
+    margin: 6px auto;
+  }
+  /* QUICK LINK INPUT */
+  #linkName,
+  #linkURL {
+    width: 75% !important;
+    max-width: 280px;
+    display: block;
+    margin: 6px auto;
+  }
+  /* JANGAN paksa semua input full */
+  input {
+    width: auto !important;
+  }
 }
