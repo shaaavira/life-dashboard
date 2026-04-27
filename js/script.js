@@ -95,7 +95,7 @@ function resetTimer() {
     updateTimerDisplay();
 }
 
-// 🔥 CUSTOM TIMER
+// CUSTOM TIMER
 function setCustomTimer() {
     const minutes = document.getElementById("customMinutes").value;
 
@@ -120,7 +120,7 @@ function addTask() {
 
     if (text === "") return;
 
-    // 🔥 CEK DUPLIKAT
+    // CEK DUPLIKAT
     let isDuplicate = tasks.some(task => 
         task.text.toLowerCase() === text.toLowerCase()
     );
@@ -175,7 +175,7 @@ function editTask(index) {
 
     if (newText === "") return;
 
-    // 🔥 CEK DUPLIKAT (kecuali dirinya sendiri)
+    // CEK DUPLIKAT (kecuali dirinya sendiri)
     let isDuplicate = tasks.some((task, i) => 
         task.text.toLowerCase() === newText.toLowerCase() && i !== index
     );
@@ -198,7 +198,7 @@ function renderTasks() {
     tasks.forEach((task, index) => {
         let li = document.createElement("li");
 
-        // 🔥 DRAG FEATURE
+        // DRAG FEATURE
         li.setAttribute("draggable", true);
 
         li.addEventListener("dragstart", () => {
