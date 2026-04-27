@@ -389,20 +389,27 @@ body.dark #themeToggle {
     .row {
         flex-direction: column !important;
     }
-
-        /* =========================
-       INPUT GLOBAL FIX (HP)
-       Biar tidak semua jadi full width
-    ========================= */
-    
     #taskInput,
     #linkName,
     #linkURL {
-        width: 80% !important;
-        max-width: 300px;
-        display: block;
-        margin: 5px auto;
+        width: 75% !important;
+        max-width: 260px !important;
+        display: block !important;
+        margin: 6px auto !important;
+        box-sizing: border-box !important;
     }
+
+    /* tombol biar gak melebar */
+    .card button {
+        width: auto !important;
+    }
+
+    /* paksa input lain tetap aman */
+    input {
+        width: auto !important;
+        max-width: 100% !important;
+    }
+}
     
     #customMinutes,
     #nameInput {
