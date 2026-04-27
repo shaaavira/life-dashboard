@@ -316,6 +316,7 @@ body.dark #themeToggle {
     background: #ffe0ba !important;
     color: #4a2a18 !important;
 }
+
 /* MOBILE POLISH */
 @media (max-width: 768px) {
 
@@ -335,13 +336,16 @@ body.dark #themeToggle {
         font-size: 14px;
     }
 
+    /* FIX INPUT LAYOUT */
     input {
-        width: 30%;
-        margin-bottom: 1px;
+        width: 50%;
+        margin-bottom: 8px;
+        box-sizing: border-box;
     }
 
     button {
-        width: 30%;
+        width: 50%;
+        margin-bottom: 8px;
     }
 
     .timer-buttons {
