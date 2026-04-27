@@ -316,24 +316,171 @@ body.dark #themeToggle {
     background: #ffe0ba !important;
     color: #4a2a18 !important;
 }
+
 @media (max-width: 768px) {
 
-    /* =========================
-       TEXT SCALE HP
-    ========================= */
     .main-title {
         font-size: 14px;
     }
 
     #time {
-        font-size: 34px !important;
-        font-weight: 800;
+        font-size: 24px;
     }
 
     #date {
         font-size: 12px;
     }
 
+    #greeting {
+        font-size: 14px;
+    }
+    /* =========================
+       TIMER INPUT FIX (BIAR TIDAK PANJANG)
+    ========================= */
+    #customMinutes {
+        width: 60% !important;
+        max-width: 140px;
+        display: block;
+        margin: 0 auto;
+    }    
+    /* =========================
+       ROW FIX
+    ========================= */
+    .row {
+        flex-direction: column !important;
+    }
+
+    /* =========================
+       TIMER BUTTON (START STOP RESET)
+    ========================= */
+    .timer-buttons {
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .timer-buttons button {
+        width: auto !important;
+        min-width: 90px;
+    }
+
+    /* =========================
+       TASK CENTER FIX (INI YANG SEBELUMNYA GAGAL)
+    ========================= */
+    #taskInput {
+        display: block;
+        margin: 0 auto 8px auto;
+        width: 80% !important;
+        text-align: center;
+    }
+
+    .card button[onclick="addTask()"] {
+        display: block;
+        margin: 0 auto 10px auto;
+        width: auto !important;
+    }
+
+    #taskList {
+        text-align: center;
+    }
+
+    /* =========================
+       QUICK LINKS CENTER FIX
+    ========================= */
+    #linkName,
+    #linkURL {
+        display: block;
+        margin: 5px auto;
+        width: 80% !important;
+        text-align: center;
+    }
+
+    .card button[onclick="addLink()"] {
+        display: block;
+        margin: 8px auto;
+        width: auto !important;
+    }
+
+    #links {
+        text-align: center;
+    }
+
+    #links a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* paksa semua input tidak ganggu layout */
+    input {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: auto !important;
+    }
+
+    /* TIMER */
+    .timer-buttons {
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .timer-buttons button {
+        min-width: 80px;
+    }
+
+    /* TASK CENTER */
+    #taskInput {
+        display: block;
+        margin: 0 auto 8px auto;
+        width: 80% !important;
+    }
+
+    .card button[onclick="addTask()"] {
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    #taskList {
+        text-align: center;
+    }
+
+    /* LINKS CENTER */
+    #linkName,
+    #linkURL {
+        display: block;
+        margin: 5px auto;
+        width: 80% !important;
+    }
+
+    .card button[onclick="addLink()"] {
+        display: block;
+        margin: 8px auto;
+    }
+
+    #links {
+        text-align: center;
+    }
+
+    #links a {
+        display: inline-flex;
+    }
+
+    /* =========================
+       JAM (HARUS PALING MENONJOL)
+    ========================= */
+    #time {
+        font-size: 34px !important;
+        font-weight: 800;
+    }
+
+    /* =========================
+       GREETING / MY FRIEND (LEBIH KECIL)
+    ========================= */
     #greeting {
         font-size: 12px !important;
         font-weight: 500;
@@ -345,77 +492,47 @@ body.dark #themeToggle {
     }
 
     /* =========================
-       INPUT NAME
+       INPUT NAME (DIPERKECIL)
     ========================= */
     #nameInput {
         width: 60% !important;
-        font-size: 13px;
         padding: 6px;
-        display: block;
-        margin: 0 auto 8px auto;
+        font-size: 14px;
     }
 
+    /* tombol Save biar seimbang */
     #clockCard button {
         width: auto !important;
         padding: 6px 10px;
     }
 
-    /* =========================
-       TIMER INPUT + BUTTON (FIX SEJAJAR)
-    ========================= */
-    .timer-set {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        margin-top: 15px;
+    body.dark {
+        background-color: #2f221d !important;
+        background-image: none !important;
     }
 
-    #customMinutes {
-        width: 70px !important;
-        padding: 6px;
-        font-size: 14px;
-        text-align: center;
+    body.dark .card {
+        background: #6b5043 !important;
+        color: #fff7ef !important;
     }
 
-    .timer-set button {
-        padding: 6px 10px;
-        margin: 0 !important;
+    body.dark .main-title {
+        background: #5b4338 !important;
+        color: #ffe2bf !important;
     }
 
-    /* =========================
-       LAYOUT
-    ========================= */
-    .row {
-        flex-direction: column !important;
+    body.dark #themeToggle {
+        background: #ffe0ba !important;
+        color: #4a2a18 !important;
     }
 
-    /* =========================
-       INPUT FULL FIX
-    ========================= */
-    input {
-        width: 100% !important;
-        box-sizing: border-box;
+    body.dark input {
+        background: #ffe7cc !important;
+        color: #3c2417 !important;
     }
 
-    /* =========================
-       BUTTON FIX
-    ========================= */
-    button {
-        width: auto !important;
-    }
-
-    /* =========================
-       TIMER BUTTONS
-    ========================= */
-    .timer-buttons {
-        display: flex !important;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .timer-buttons button {
-        min-width: 80px;
+    body.dark button {
+        background: linear-gradient(135deg,#efbf86,#d69155) !important;
+        color: #3c2417 !important;
     }
 }
