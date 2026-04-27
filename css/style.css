@@ -343,7 +343,7 @@ body.dark #themeToggle {
     }
 
     /* =========================
-       TIMER BUTTON (START STOP RESET) → SEJAJAR
+       TIMER BUTTON (START STOP RESET)
     ========================= */
     .timer-buttons {
         flex-direction: row !important;
@@ -357,34 +357,52 @@ body.dark #themeToggle {
     }
 
     /* =========================
-       TASK INPUT + ADD → CENTER
+       TASK CENTER FIX (INI YANG SEBELUMNYA GAGAL)
     ========================= */
-    .task-input-group,
-    .input-group {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        flex-wrap: wrap;
+    #taskInput {
+        display: block;
+        margin: 0 auto 8px auto;
+        width: 80% !important;
+        text-align: center;
     }
 
-    .task-input-group input,
-    .input-group input {
-        width: 70% !important;
-        margin-bottom: 0;
-    }
-
-    .task-input-group button,
-    .input-group button {
+    .card button[onclick="addTask()"] {
+        display: block;
+        margin: 0 auto 10px auto;
         width: auto !important;
     }
 
+    #taskList {
+        text-align: center;
+    }
+
     /* =========================
-       QUICK LINKS → CENTER
+       QUICK LINKS CENTER FIX
     ========================= */
+    #linkName,
+    #linkURL {
+        display: block;
+        margin: 5px auto;
+        width: 80% !important;
+        text-align: center;
+    }
+
+    .card button[onclick="addLink()"] {
+        display: block;
+        margin: 8px auto;
+        width: auto !important;
+    }
+
     #links {
         text-align: center;
     }
+
+    #links a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 
     #links a {
         display: inline-flex;
