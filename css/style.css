@@ -320,28 +320,28 @@ body.dark #themeToggle {
 @media (max-width: 768px) {
 
     .main-title {
-        font-size: 18px;
-    }
-
-    #time {
-        font-size: 32px;
-    }
-
-    #date {
-        font-size: 14px;
-    }
-
-    #greeting {
         font-size: 16px;
     }
 
+    #time {
+        font-size: 24px;
+    }
+
+    #date {
+        font-size: 12px;
+    }
+
+    #greeting {
+        font-size: 14px;
+    }
+
     input {
-        width: 100%;
-        margin-bottom: 5px;
+        width: 30%;
+        margin-bottom: 3px;
     }
 
     button {
-        width: 100%;
+        width: 30%;
     }
 
     .timer-buttons {
