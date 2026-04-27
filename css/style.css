@@ -213,19 +213,26 @@ body.dark input {
 
 body.dark input::placeholder {
 /* =======================
-   DARK MODE - ROSE NIGHT
+   DARK MODE PRETTY ROSE
 ======================= */
 
 body.dark {
-    background: linear-gradient(135deg,#4a323a,#5a3d47,#3a272e) !important;
-    color: #fff6f8 !important;
-    background-image: none !important;
+    background: linear-gradient(135deg, #2f2328, #3b2a31, #24191d);
+    color: #fff5f7;
+    background-image: none;
 }
 
-body.dark .card,
 body.dark .main-title {
-    background: rgba(255,255,255,0.10) !important;
-    color: #fff6f8 !important;
+    background: rgba(255,255,255,0.08);
+    color: #ffd6e0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+body.dark .card {
+    background: rgba(255,255,255,0.07);
+    color: #fff5f7;
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
 }
 
 body.dark h1,
@@ -233,33 +240,51 @@ body.dark h2,
 body.dark p,
 body.dark span,
 body.dark li {
-    color: #fff6f8 !important;
+    color: #fff5f7;
+}
+
+body.dark h2 {
+    color: #ffc6d5;
 }
 
 body.dark #time,
 body.dark #timer {
-    color: #ffd6df !important;
+    color: #ffd9e2;
+    text-shadow: 0 0 12px rgba(255,190,210,0.35);
 }
 
 body.dark li {
-    background: rgba(255,255,255,0.07) !important;
+    background: rgba(255,255,255,0.05);
 }
 
 body.dark input {
-    background: rgba(255,255,255,0.12) !important;
-    color: white !important;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    border: none;
+}
+
+body.dark input::placeholder {
+    color: #f3cfd8;
 }
 
 body.dark button {
-    background: #ffb6c1 !important;
-    color: #4a2330 !important;
+    background: linear-gradient(135deg, #ffb6c9, #ff94b0);
+    color: #4d2230;
+}
+
+body.dark button:hover {
+    background: linear-gradient(135deg, #ffc4d3, #ffabc1);
+}
+
+body.dark #links a {
+    background: rgba(255,255,255,0.06);
+    color: #ffe0e8;
 }
 
 body.dark #themeToggle {
-    background: #ffe4ec !important;
-    color: #5a2e3c !important;
+    background: #ffe4ec;
+    color: #5a2c3a;
 }
-
 /* =======================
    THEME BUTTON POSITION
 ======================= */
