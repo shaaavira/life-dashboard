@@ -155,21 +155,19 @@ li {
         2px 2px 0 #fff,
         0 0 10px rgba(255, 183, 0, 0.6);
 }
-body.dark {
-=======================
-   DARK MODE 
+ =======================
+   NEW DARK MODE BRIGHT
 ======================= 
 
 body.dark {
-    background: linear-gradient(135deg, #5a4636, #6b5443, #4a392d);
-    color: #fffdf8;
+    background: #7b624d !important;
+    color: #ffffff !important;
 }
 
 body.dark .card {
-    background: rgba(255, 248, 240, 0.12);
-    border: 1px solid rgba(255,255,255,0.12);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
-    color: #ffffff;
+    background: #9a7d63 !important;
+    color: #ffffff !important;
+    border: none !important;
 }
 
 body.dark h1,
@@ -177,36 +175,22 @@ body.dark h2,
 body.dark p,
 body.dark span,
 body.dark li {
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 body.dark input {
-    background: rgba(255,255,255,0.14);
-    color: #ffffff;
-    border: 1px solid rgba(255,255,255,0.18);
-}
-
-body.dark input::placeholder {
-    color: #f0e6da;
+    background: #b39273 !important;
+    color: white !important;
 }
 
 body.dark button {
-    background: #ffe08a;
-    color: #4a2f00;
-    font-weight: 600;
-}
-
-body.dark button:hover {
-    background: #ffe9a8;
-}
-
-body.dark a {
-    color: #fff1a8;
+    background: #ffe08a !important;
+    color: #4a2f00 !important;
 }
 
 body.dark #themeToggle {
-    background: #fff7dc;
-    color: #4a2f00;
+    background: #fff7d1 !important;
+    color: #4a2f00 !important;
 }
 =======================
    THEME BUTTON POSITION
