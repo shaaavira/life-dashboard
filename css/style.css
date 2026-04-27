@@ -307,3 +307,16 @@ body.dark #themeToggle {
     background: #ffe0ba !important;
     color: #4a2a18 !important;
 }
+/* =========================
+   FIX JARAK JAM & TANGGAL (FORCE)
+========================= */
+
+#time,
+#date {
+    margin: 0 !important;
+    line-height: 1.1;
+}
+
+#time {
+    margin-bottom: 2px !important;
+}
