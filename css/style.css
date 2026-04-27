@@ -379,37 +379,31 @@ body.dark #themeToggle {
     }
 }
 /* =========================
-   📱 MOBILE CLEAN UI (FIX OVERFLOW & ESTETIK)
+   📱 MOBILE FINAL (BERSIH & GA TABRAKAN)
 ========================= */
 
 @media (max-width: 768px) {
 
-    /* container full tapi rapi */
     .container {
         max-width: 100%;
-        padding: 10px;
+        padding: 12px;
     }
 
-    /* stack semua card ke bawah */
     .row {
         flex-direction: column;
         gap: 10px;
     }
 
-    /* card biar ga kepanjangan & lebih compact */
     .card {
         width: 100%;
         padding: 14px;
-        border-radius: 16px;
+        box-sizing: border-box;
     }
 
-    /* judul */
     .main-title {
         font-size: 18px;
-        padding: 10px;
     }
 
-    /* clock lebih proporsional */
     #time {
         font-size: 34px;
     }
@@ -418,34 +412,30 @@ body.dark #themeToggle {
         font-size: 14px;
     }
 
-    /* greeting */
     #greeting {
         font-size: 16px;
     }
 
-    /* input + button lebih rapi */
     input {
         width: 100%;
-        margin: 5px 0;
+        box-sizing: border-box;
+        margin: 6px 0;
         font-size: 15px;
     }
 
     button {
         width: 100%;
-        margin-top: 5px;
+        margin-top: 6px;
         font-size: 14px;
     }
 
-    /* timer buttons jadi stack */
     .timer-buttons {
         flex-direction: column;
         gap: 6px;
     }
 
-    /* quick links biar ga melebar */
     #links a {
         display: block;
         text-align: center;
-        margin: 5px 0;
     }
 }
