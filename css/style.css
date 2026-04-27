@@ -334,7 +334,15 @@ body.dark #themeToggle {
     #greeting {
         font-size: 14px;
     }
-
+    /* =========================
+       TIMER INPUT FIX (BIAR TIDAK PANJANG)
+    ========================= */
+    #customMinutes {
+        width: 60% !important;
+        max-width: 140px;
+        display: block;
+        margin: 0 auto;
+    }    
     /* =========================
        ROW FIX
     ========================= */
@@ -422,7 +430,7 @@ body.dark #themeToggle {
     }
 
     .timer-buttons button {
-        min-width: 90px;
+        min-width: 80px;
     }
 
     /* TASK CENTER */
