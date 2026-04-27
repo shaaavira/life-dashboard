@@ -8,9 +8,18 @@ window.onload = function () {
     document.getElementById("nameInput").value = userName;
 
     updateTime();
+    updateTimerDisplay();
+    renderTasks();
+    renderLinks();
+    loadTheme();
+
+    const btn = document.getElementById("themeToggle");
+    if (btn) btn.addEventListener("click", toggleTheme);
 };
 
-// simpan nama
+// =======================
+// SAVE NAME
+// =======================
 function saveName() {
     const input = document.getElementById("nameInput").value;
 
@@ -19,23 +28,28 @@ function saveName() {
         localStorage.setItem("username", userName);
 
         document.getElementById("nameDisplay").innerText = userName;
+        updateTime();
     }
 }
 
-// update jam + greeting
+// =======================
+// CLOCK + GREETING
+// =======================
 function updateTime() {
     const now = new Date();
 
-    document.getElementById("time").innerText = now.toLocaleTimeString();
+    document.getElementById("time").innerText =
+        now.toLocaleTimeString();
 
-    const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
+    const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
     };
+
     document.getElementById("date").innerText =
-       now.toLocaleDateString('en-US', options);
+        now.toLocaleDateString("en-US", options);
 
     let hour = now.getHours();
     let greeting = "";
@@ -44,33 +58,31 @@ function updateTime() {
     else if (hour < 18) greeting = "🍯 Good Afternoon, ";
     else greeting = "🌙 Good Evening, ";
 
-    // ⛔ ini penting: jangan replace seluruh text!
-    document.getElementById("greeting").childNodes[0].nodeValue = greeting;
+    document.getElementById("greeting").innerHTML =
+        greeting + '<span id="nameDisplay">' + userName + "</span>";
 }
 
-// jalan terus tiap detik
 setInterval(updateTime, 1000);
 
-
+// =======================
+// TIMER
+// =======================
 let timer;
-let timeLeft = localStorage.getItem("timer") 
-    ? parseInt(localStorage.getItem("timer")) 
-    : 1500; // default 25 menit
+let timeLeft = localStorage.getItem("timer")
+    ? parseInt(localStorage.getItem("timer"))
+    : 1500;
 
-// tampilkan timer pertama kali
-updateTimerDisplay();
-
-// fungsi tampilkan waktu
 function updateTimerDisplay() {
     let minutes = Math.floor(timeLeft / 60);
     let seconds = timeLeft % 60;
 
     document.getElementById("timer").innerText =
-        `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
 }
 
-// START
 function startTimer() {
+    clearInterval(timer);
+
     timer = setInterval(() => {
         if (timeLeft > 0) {
             timeLeft--;
@@ -83,30 +95,31 @@ function startTimer() {
     }, 1000);
 }
 
-// STOP
 function stopTimer() {
     clearInterval(timer);
 }
 
-// RESET
 function resetTimer() {
+    clearInterval(timer);
     timeLeft = 1500;
     localStorage.setItem("timer", timeLeft);
     updateTimerDisplay();
 }
 
-// CUSTOM TIMER
 function setCustomTimer() {
     const minutes = document.getElementById("customMinutes").value;
 
     if (minutes && minutes > 0) {
+        clearInterval(timer);
         timeLeft = minutes * 60;
         localStorage.setItem("timer", timeLeft);
         updateTimerDisplay();
     }
 }
 
-
+// =======================
+// TASKS
+// =======================
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 let dragIndex = null;
 
@@ -120,8 +133,7 @@ function addTask() {
 
     if (text === "") return;
 
-    // CEK DUPLIKAT
-    let isDuplicate = tasks.some(task => 
+    let isDuplicate = tasks.some(task =>
         task.text.toLowerCase() === text.toLowerCase()
     );
 
@@ -143,7 +155,6 @@ function getEmoji(text) {
     if (text.includes("rebus telur")) return "🥚";
     if (text.includes("masak telur")) return "🍳";
     if (text.includes("goreng telur")) return "🍳";
-
     if (text.includes("belajar")) return "📚";
     if (text.includes("makan")) return "🍳";
     if (text.includes("tidur")) return "😴";
@@ -152,7 +163,7 @@ function getEmoji(text) {
     if (text.includes("olahraga")) return "🏃";
     if (text.includes("minum") || text.includes("kopi")) return "☕";
 
-    return "🥚";
+    return "🐣";
 }
 
 function toggleTask(index) {
@@ -170,20 +181,11 @@ function deleteTask(index) {
 function editTask(index) {
     let newText = prompt("Edit your task:", tasks[index].text);
 
-    if (newText === null) return; // cancel
+    if (newText === null) return;
+
     newText = newText.trim();
 
     if (newText === "") return;
-
-    // CEK DUPLIKAT (kecuali dirinya sendiri)
-    let isDuplicate = tasks.some((task, i) => 
-        task.text.toLowerCase() === newText.toLowerCase() && i !== index
-    );
-
-    if (isDuplicate) {
-        alert("Task already exists! 🐣");
-        return;
-    }
 
     tasks[index].text = newText;
 
@@ -198,7 +200,6 @@ function renderTasks() {
     tasks.forEach((task, index) => {
         let li = document.createElement("li");
 
-        // DRAG FEATURE
         li.setAttribute("draggable", true);
 
         li.addEventListener("dragstart", () => {
@@ -218,10 +219,8 @@ function renderTasks() {
             renderTasks();
         });
 
-        // =====================
         let span = document.createElement("span");
-        let emoji = getEmoji(task.text);
-        span.innerText = emoji + " " + task.text;
+        span.innerText = getEmoji(task.text) + " " + task.text;
 
         span.onclick = () => toggleTask(index);
         span.ondblclick = () => editTask(index);
@@ -241,8 +240,9 @@ function renderTasks() {
     });
 }
 
-renderTasks();
-
+// =======================
+// QUICK LINKS
+// =======================
 let links = JSON.parse(localStorage.getItem("links")) || [];
 
 function saveLinks() {
@@ -301,6 +301,9 @@ function renderLinks() {
     });
 }
 
+// =======================
+// THEME
+// =======================
 function loadTheme() {
     const saved = localStorage.getItem("theme");
 
@@ -314,13 +317,8 @@ function loadTheme() {
 function toggleTheme() {
     const isDark = document.body.classList.toggle("dark");
 
-    // simpan state TERKINI (bisa "dark" atau "light")
     localStorage.setItem("theme", isDark ? "dark" : "light");
 
     const btn = document.getElementById("themeToggle");
     if (btn) btn.innerText = isDark ? "☀️" : "🌙";
 }
-renderLinks();
-
-    const btn = document.getElementById("themeToggle");
-    if (btn) btn.addEventListener("click", toggleTheme);
