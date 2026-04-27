@@ -351,20 +351,30 @@ body.dark #themeToggle {
         font-size: 16px;
     }
 
-    /* 🔥 FIX PALING PENTING */
+    /* 🔥 FIX INPUT GROUP */
     .input-group {
+        display: flex;
         flex-direction: column;
         gap: 6px;
     }
 
-    .input-group input {
-        width: 100%;
-    }
-
+    .input-group input,
     .input-group button {
         width: 100%;
     }
 
+    /* TIMER BUTTON */
+    .timer-buttons {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    /* LINKS */
+    #links a {
+        display: block;
+        text-align: center;
+    }
+}
     .timer-buttons {
         flex-direction: column;
         gap: 6px;
