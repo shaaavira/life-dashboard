@@ -1,22 +1,8 @@
-/* =========================
-   BASE (LIGHT MODE 🥚✨)
-========================= */
-
 body {
     font-family: 'Fredoka', poppins;
     background-color: #fff3b0;
-
-    /* 🥚 RANDOM PATTERN (MULTI LAYER) */
-    background-image: 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='55' cy='54' r='1' fill='white'/%3E%3Ccircle cx='67' cy='54' r='1' fill='white'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ff9aa2'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ff9aa2'/%3E%3Cpath d='M52 67 Q60 78 68 67 Q64 75 60 75 Q56 75 52 67 Z' fill='%233c2417'/%3E%3C/svg%3E"),
-
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3C/svg%3E"),
-
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='10' fill='%23ffe08a'/%3E%3C/svg%3E");
-
-    background-size: 65px 65px, 90px 90px, 120px 120px;
-    background-position: 0 0, 30px 40px, -20px 60px;
-
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Ccircle cx='60' cy='60' r='18' fill='%23ffd166'/%3E%3Ccircle cx='180' cy='150' r='14' fill='%23ffb703'/%3E%3Ccircle cx='120' cy='220' r='12' fill='%23ffe08a'/%3E%3C/svg%3E");
+    background-size: 70px 70px;
     margin: 0;
     transition: 0.3s;
 }
@@ -84,14 +70,24 @@ body {
    TEXT
 ========================= */
 
-h1 { font-size: 25px; margin: 10px 0; }
+h1 {
+    font-size: 25px;
+    margin: 10px 0;
+}
 
-h2 { color: #fb8500; font-size: 13px; margin: 6px 0; }
+h2 {
+    color: #fb8500;
+    font-size: 13px;
+    margin: 6px 0;
+}
 
-#time, #timer {
+#time,
+#timer {
     color: #fb8500;
     text-align: center;
-    text-shadow: 2px 2px 0 #fff, 0 0 8px rgba(255,183,0,0.8);
+    text-shadow:
+        2px 2px 0 #fff,
+        0 0 8px rgba(255,183,0,0.8);
 }
 
 #date {
@@ -109,36 +105,177 @@ input {
     padding: 8px;
     border-radius: 12px;
     border: none;
+    margin-right: 5px;
+    outline: none;
 }
 
 button {
     padding: 7px 12px;
+    border: none;
     border-radius: 14px;
     background: linear-gradient(135deg,#ffd166,#ffb703);
     color: #5a3d00;
     cursor: pointer;
+    transition: 0.3s;
     font-weight: 600;
 }
 
-button:hover { transform: scale(1.05); }
+button:hover {
+    transform: scale(1.05);
+}
 
 /* =========================
-   DARK MODE ☕✨
+   LIST
+========================= */
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background: #fff1b6;
+    padding: 8px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+#links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: #fff3b0;
+    color: #5a3d00;
+    text-decoration: none;
+}
+
+.link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =========================
+   TIMER BUTTONS
+========================= */
+
+.timer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* =========================
+   THEME BUTTON
+========================= */
+
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background: #fff4c9;
+    color: #5a3d00;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.25s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.08);
+}
+
+/* =========================
+   DARK MODE MOCHA ☕🤎
 ========================= */
 
 body.dark {
-    background-color: #2f221d;
+    background-color: #2f221d !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%235f463a' stroke-width='3'%3E%3Crect x='40' y='72' width='44' height='28' rx='7'/%3E%3Cpath d='M84 80 h10 a8 8 0 1 1 0 14 h-10'/%3E%3Cpath d='M50 64 q4 -10 8 0 q4 -10 8 0 q4 -10 8 0'/%3E%3C/g%3E%3C/svg%3E") !important;
+    background-size: 95px 95px !important;
+    color: #fff7ef !important;
+}
 
-    /* ☕ RANDOM COFFEE PATTERN */
-    background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cg stroke='%235f463a' fill='none' stroke-width='3'%3E%3Crect x='40' y='72' width='44' height='28' rx='7'/%3E%3Cpath d='M84 80 h10 a8 8 0 1 1 0 14 h-10'/%3E%3C/g%3E%3C/svg%3E"),
+body.dark .main-title {
+    background: #5b4338 !important;
+    color: #ffe2bf !important;
+    text-shadow: none !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Ccircle cx='70' cy='70' r='18' fill='%235f463a'/%3E%3C/svg%3E"),
+body.dark .card {
+    background: #6b5043 !important;
+    color: #fff7ef !important;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+}
 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M50 64 q4 -10 8 0 q4 -10 8 0 q4 -10 8 0' stroke='%235f463a' fill='none'/%3E%3C/svg%3E");
+body.dark h1,
+body.dark h2,
+body.dark p,
+body.dark span,
+body.dark li,
+body.dark a,
+body.dark label {
+    color: #fff7ef !important;
+}
 
-    background-size: 95px 95px, 140px 140px, 180px 180px;
-    background-position: 0 0, 40px 60px, -30px 80px;
+body.dark h2 {
+    color: #ffd8a0 !important;
+}
 
-    color: #fff7ef;
+body.dark #time,
+body.dark #timer {
+    color: #ffe0b6 !important;
+    text-shadow: none !important;
+}
+
+body.dark #date {
+    color: #ffe8ca !important;
+}
+
+body.dark li {
+    background: #7b5d4f !important;
+}
+
+body.dark input {
+    background: #ffe7cc !important;
+    color: #3c2417 !important;
+}
+
+body.dark input::placeholder {
+    color: #8a6a58 !important;
+}
+
+body.dark button {
+    background: linear-gradient(135deg,#efbf86,#d69155) !important;
+    color: #3c2417 !important;
+}
+
+body.dark #links a {
+    background: #7b5d4f !important;
+    color: #fff0db !important;
+}
+
+/* Greeting + nama sama warna */
+body.dark #greeting,
+body.dark #greeting #nameDisplay {
+    color: #ffd8a0 !important;
+}
+
+body.dark #themeToggle {
+    background: #ffe0ba !important;
+    color: #4a2a18 !important;
 }
