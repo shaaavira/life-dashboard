@@ -6,15 +6,16 @@ body {
     font-family: 'Fredoka', poppins;
     background-color: #fff3b0;
 
-    /* 🥚 RANDOM PATTERN */
+    /* 🥚 RANDOM PATTERN (MULTI LAYER) */
     background-image: 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ff9aa2'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ff9aa2'/%3E%3Cpath d='M52 67 Q60 78 68 67 Z' fill='%233c2417'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='55' cy='54' r='1' fill='white'/%3E%3Ccircle cx='67' cy='54' r='1' fill='white'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ff9aa2'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ff9aa2'/%3E%3Cpath d='M52 67 Q60 78 68 67 Q64 75 60 75 Q56 75 52 67 Z' fill='%233c2417'/%3E%3C/svg%3E"),
 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90'%3E%3Ccircle cx='45' cy='45' r='10' fill='%23ffe08a'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3C/svg%3E"),
 
-    background-size: 70px 70px, 120px 120px;
-    background-position: 0 0, 35px 55px;
-    background-repeat: repeat, space;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ccircle cx='60' cy='60' r='10' fill='%23ffe08a'/%3E%3C/svg%3E");
+
+    background-size: 65px 65px, 90px 90px, 120px 120px;
+    background-position: 0 0, 30px 40px, -20px 60px;
 
     margin: 0;
     transition: 0.3s;
@@ -108,7 +109,6 @@ input {
     padding: 8px;
     border-radius: 12px;
     border: none;
-    margin-right: 5px;
 }
 
 button {
@@ -123,85 +123,22 @@ button {
 button:hover { transform: scale(1.05); }
 
 /* =========================
-   LIST
-========================= */
-
-ul { padding: 0; }
-
-li {
-    list-style: none;
-    background: #fff1b6;
-    padding: 8px;
-    border-radius: 12px;
-    margin-bottom: 6px;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* =========================
-   LINKS
-========================= */
-
-#links a {
-    display: inline-block;
-    margin: 5px;
-    padding: 8px 15px;
-    border-radius: 999px;
-    background: #fff3b0;
-    color: #5a3d00;
-    text-decoration: none;
-}
-
-/* =========================
-   TIMER BUTTONS
-========================= */
-
-.timer-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
-}
-
-/* =========================
-   THEME BUTTON
-========================= */
-
-#themeToggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 999;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
-    background: #fff4c9;
-    color: #5a3d00;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-}
-
-#themeToggle:hover {
-    transform: scale(1.08);
-}
-
-/* =========================
    DARK MODE ☕✨
 ========================= */
 
 body.dark {
     background-color: #2f221d;
 
+    /* ☕ RANDOM COFFEE PATTERN */
     background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Crect x='40' y='72' width='44' height='28' rx='7' stroke='%235f463a' fill='none'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cg stroke='%235f463a' fill='none' stroke-width='3'%3E%3Crect x='40' y='72' width='44' height='28' rx='7'/%3E%3Cpath d='M84 80 h10 a8 8 0 1 1 0 14 h-10'/%3E%3C/g%3E%3C/svg%3E"),
 
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Ccircle cx='70' cy='70' r='18' fill='%235f463a'/%3E%3C/svg%3E");
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Ccircle cx='70' cy='70' r='18' fill='%235f463a'/%3E%3C/svg%3E"),
 
-    background-size: 100px 100px, 160px 160px;
-    background-position: 0 0, 50px 80px;
-    background-repeat: repeat, space;
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M50 64 q4 -10 8 0 q4 -10 8 0 q4 -10 8 0' stroke='%235f463a' fill='none'/%3E%3C/svg%3E");
+
+    background-size: 95px 95px, 140px 140px, 180px 180px;
+    background-position: 0 0, 40px 60px, -30px 80px;
 
     color: #fff7ef;
 }
