@@ -389,32 +389,13 @@ body.dark #themeToggle {
     .row {
         flex-direction: column !important;
     }
-    #taskInput,
-    #linkName,
-    #linkURL {
-        width: 75% !important;
-        max-width: 260px !important;
-        display: block !important;
-        margin: 6px auto !important;
-        box-sizing: border-box !important;
-    }
 
-    /* tombol biar gak melebar */
-    .card button {
-        width: auto !important;
-    }
-
-    /* paksa input lain tetap aman */
+    /* =========================
+       INPUT FULL FIX
+    ========================= */
     input {
-        width: auto !important;
-        max-width: 100% !important;
-    }
-}
-    
-    #customMinutes,
-    #nameInput {
-        width: 70px !important;
-        max-width: 150px;
+        width: 100% !important;
+        box-sizing: border-box;
     }
 
     /* =========================
@@ -436,24 +417,5 @@ body.dark #themeToggle {
 
     .timer-buttons button {
         min-width: 80px;
-    }
-    .card input {
-        width: 75% !important;
-        max-width: 260px !important;
-        display: block !important;
-        margin: 6px auto !important;
-        text-align: center !important;
-    }
-
-    /* tombol tetap rapi */
-    .card button {
-        width: auto !important;
-        display: inline-block !important;
-    }
-
-    /* khusus biar input tidak dipaksa full */
-    input {
-        width: auto !important;
-        max-width: 100% !important;
     }
 }
