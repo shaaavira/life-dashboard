@@ -38,7 +38,7 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 25px;
     margin: 10px 0;
 }
 
@@ -154,4 +154,28 @@ li {
     text-shadow:
         2px 2px 0 #fff,
         0 0 10px rgba(255, 183, 0, 0.6);
+}
+/* =
+body.dark {
+    background: #1e1e2f;
+    background-image: none;
+    color: white;
+}
+
+body.dark .card {
+    background: #2a2a40;
+}
+
+body.dark li {
+    background: #3a3a55;
+}
+
+body.dark input {
+    background: #3a3a55;
+    color: white;
+}
+
+body.dark button {
+    background: #444;
+    color: white;
 }
