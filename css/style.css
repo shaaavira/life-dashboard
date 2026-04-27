@@ -1,10 +1,16 @@
 body {
     font-family: 'Fredoka', poppins;
     background-color: #fff3b0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='260' height='260' viewBox='0 0 260 260'%3E%3Ccircle cx='60' cy='60' r='18' fill='%23ffd166'/%3E%3Ccircle cx='180' cy='150' r='14' fill='%23ffb703'/%3E%3Ccircle cx='120' cy='220' r='12' fill='%23ffe08a'/%3E%3C/svg%3E");
+    background-size: 70px 70px;
     margin: 0;
+    transition: 0.3s;
 }
 
-/* layout */
+/* =========================
+   LAYOUT
+========================= */
+
 .container {
     max-width: 650px;
     margin: auto;
@@ -16,55 +22,153 @@ body {
     gap: 15px;
 }
 
+.row .card {
+    flex: 1;
+}
+
+.timer-card {
+    flex: 1.2;
+}
+
 @media (max-width:768px) {
     .row {
         flex-direction: column;
     }
 }
 
-/* card */
+/* =========================
+   CARD
+========================= */
+
 .card {
     background: #fff8dc;
     border-radius: 18px;
-    padding: 15px;
+    padding: 12px;
     margin-bottom: 10px;
+    box-shadow: 0 6px 12px rgba(255,180,0,0.20);
+    transition: 0.3s;
 }
 
-/* title */
+.card:hover {
+    transform: translateY(-3px);
+}
+
 .main-title {
     text-align: center;
-}
-
-/* text */
-#time, #timer {
-    text-align: center;
+    color: #fb8500;
+    font-size: 24px;
+    background: #fff8dc;
+    border-radius: 26px;
+    padding: 12px;
+    margin-bottom: 10px;
+    text-shadow:
+        2px 2px 0 #fff,
+        0 0 10px rgba(255,183,0,0.6);
 }
 
 /* =========================
-   🔥 FIX TIMER (INI KUNCI)
+   TEXT
 ========================= */
 
-.timer-wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
+h1 {
+    font-size: 25px;
+    margin: 10px 0;
 }
 
-/* hilangkan dorongan kiri */
-.timer-wrapper input {
-    width: 120px;
-    margin: 0;
+h2 {
+    color: #fb8500;
+    font-size: 13px;
+    margin: 6px 0;
+}
+
+#time,
+#timer {
+    color: #fb8500;
+    text-align: center;
+    text-shadow:
+        2px 2px 0 #fff,
+        0 0 8px rgba(255,183,0,0.8);
+}
+
+#time {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+#date {
+    color: #fb8500;
+    font-size: 16px;
+    font-weight: bold;
     text-align: center;
 }
 
-/* tombol normal */
-.timer-wrapper button {
-    width: auto;
+/* =========================
+   FORM
+========================= */
+
+input {
+    padding: 8px;
+    border-radius: 12px;
+    border: none;
+    margin-right: 5px;
+    outline: none;
+}
+
+button {
+    padding: 7px 12px;
+    border: none;
+    border-radius: 14px;
+    background: linear-gradient(135deg,#ffd166,#ffb703);
+    color: #5a3d00;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 /* =========================
-   BUTTON TIMER
+   LIST
+========================= */
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    background: #fff1b6;
+    padding: 8px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+#links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 999px;
+    background: #fff3b0;
+    color: #5a3d00;
+    text-decoration: none;
+}
+
+.link-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* =========================
+   TIMER BUTTONS
 ========================= */
 
 .timer-buttons {
@@ -75,35 +179,168 @@ body {
 }
 
 /* =========================
-   INPUT GLOBAL
+   THEME BUTTON
 ========================= */
 
-input {
-    padding: 8px;
-    border-radius: 12px;
-    border: none;
-}
-
-button {
-    padding: 8px 12px;
-    border-radius: 12px;
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 20px;
     border: none;
     cursor: pointer;
+    background: #fff4c9;
+    color: #5a3d00;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    transition: 0.25s;
+}
+
+#themeToggle:hover {
+    transform: scale(1.08);
 }
 
 /* =========================
-   MOBILE FIX
+   ✅ GREETING (KHUSUS)
 ========================= */
 
-@media (max-width:768px) {
+#greeting {
+    font-size: 18px;
+    font-weight: 600;
+}
 
-    .timer-wrapper {
-        flex-direction: column;
-        align-items: center;
+#nameDisplay {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#nameInput {
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* =========================
+   ✅ FIX JARAK JAM & TANGGAL
+========================= */
+
+#time,
+#date {
+    margin: 0;
+    line-height: 1.1;
+}
+
+#time {
+    margin-bottom: 2px;
+}
+
+/* =========================
+   DARK MODE MOCHA ☕🤎
+========================= */
+
+body.dark {
+    background-color: #2f221d !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg fill='none' stroke='%235f463a' stroke-width='3'%3E%3Crect x='40' y='72' width='44' height='28' rx='7'/%3E%3Cpath d='M84 80 h10 a8 8 0 1 1 0 14 h-10'/%3E%3Cpath d='M50 64 q4 -10 8 0 q4 -10 8 0 q4 -10 8 0'/%3E%3C/g%3E%3C/svg%3E") !important;
+    background-size: 60px 60px !important;
+    color: #fff7ef !important;
+}
+
+body.dark .main-title {
+    background: #5b4338 !important;
+    color: #ffe2bf !important;
+    text-shadow: none !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+body.dark .card {
+    background: #6b5043 !important;
+    color: #fff7ef !important;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.22);
+}
+
+body.dark h1,
+body.dark h2,
+body.dark p,
+body.dark span,
+body.dark li,
+body.dark a,
+body.dark label {
+    color: #fff7ef !important;
+}
+
+body.dark h2 {
+    color: #ffd8a0 !important;
+}
+
+body.dark #time,
+body.dark #timer {
+    color: #ffe0b6 !important;
+    text-shadow: none !important;
+}
+
+body.dark #date {
+    color: #ffe8ca !important;
+}
+
+body.dark li {
+    background: #7b5d4f !important;
+}
+
+body.dark input {
+    background: #ffe7cc !important;
+    color: #3c2417 !important;
+}
+
+body.dark input::placeholder {
+    color: #8a6a58 !important;
+}
+
+body.dark button {
+    background: linear-gradient(135deg,#efbf86,#d69155) !important;
+    color: #3c2417 !important;
+}
+
+body.dark #links a {
+    background: #7b5d4f !important;
+    color: #fff0db !important;
+}
+
+body.dark #greeting,
+body.dark #nameDisplay {
+    color: #ffd8a0 !important;
+}
+
+body.dark #themeToggle {
+    background: #ffe0ba !important;
+    color: #4a2a18 !important;
+}
+/* MOBILE POLISH */
+@media (max-width: 768px) {
+
+    .main-title {
+        font-size: 18px;
     }
 
-    .timer-wrapper input,
-    .timer-wrapper button {
+    #time {
+        font-size: 32px;
+    }
+
+    #date {
+        font-size: 14px;
+    }
+
+    #greeting {
+        font-size: 16px;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    button {
         width: 100%;
     }
 
