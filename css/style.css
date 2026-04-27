@@ -111,7 +111,7 @@ li {
 }
 .timer-buttons {
     display: flex;
-    justify-content: center; /* 🔥 ini bikin ke tengah */
+    justify-content: center;
     align-items: center;
     gap: 8px;
     margin-top: 10px;
@@ -119,27 +119,24 @@ li {
 #date {
     font-family: 'Fredoka', sans-serif;
     color: #fb8500;
-    font-size: 16px; /* samakan dengan h2 kalau perlu */
+    font-size: 16px; 
     font-weight: bold;
     text-align: center;
 }
 .row {
     display: flex;
-    gap: 25px;
+    gap: 15px;
     align-items: stretch;
 }
 
-/* Biar card di dalam row fleksibel */
 .row .card {
     flex: 1;
 }
 
-/* Timer sedikit lebih gede (opsional biar cakep) */
 .timer-card {
     flex: 1.2;
 }
 
-/* Responsive (HP jadi atas-bawah lagi) */
 @media (max-width: 768px) {
     .row {
         flex-direction: column;
