@@ -155,96 +155,26 @@ li {
         2px 2px 0 #fff,
         0 0 10px rgba(255, 183, 0, 0.6);
 }
-/* =
 body.dark {
-    background: #1e1e2f;
-    background-image: none;
-    color: white;
+    background: linear-gradient(135deg,#2d2218,#3b2c20,#1f1711);
+    color: #fff6ea;
 }
 
 body.dark .card {
-    background: #2a2a40;
-}
-
-body.dark li {
-    background: #3a3a55;
-}
-
-body.dark input {
-    background: #3a3a55;
-    color: white;
-}
-
-body.dark button {
-    background: #444;
-    color: white;
-}
-/* =======================
-   DARK MODE ESTHETIC
-======================= */
-
-body.dark {
-    background: linear-gradient(135deg, #2b2118, #3a2c22, #1f1712);
-    color: #fff8ef;
-}
-
-body.dark .container {
-    color: #fff8ef;
-}
-
-body.dark .main-title {
-    color: #ffe8b0;
-}
-
-body.dark .card {
-    background: rgba(255, 248, 239, 0.08);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.08);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-    color: #fff8ef;
-}
-
-body.dark h1,
-body.dark h2,
-body.dark p,
-body.dark li,
-body.dark span {
-    color: #fff8ef;
-}
-
-body.dark input {
     background: rgba(255,255,255,0.08);
-    color: #fff8ef;
-    border: 1px solid rgba(255,255,255,0.12);
+    color: #fff6ea;
 }
 
-body.dark input::placeholder {
-    color: #d8cbbd;
-}
-
+body.dark input,
 body.dark button {
-    background: #f6c65b;
-    color: #3b2a12;
-    border: none;
-    font-weight: 600;
-}
-
-body.dark button:hover {
-    background: #ffd97b;
-    transform: translateY(-2px);
-    transition: 0.2s ease;
-}
-
-body.dark a {
-    color: #ffe08a;
+    background: #4a3828;
+    color: white;
 }
 
 body.dark #themeToggle {
-    background: #fff3cf;
-    color: #3b2a12;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background: #fff3c7;
+    color: #222;
 }
-
 =======================
    THEME BUTTON POSITION
 ======================= 
