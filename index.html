@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- Responsive -->
+    <!-- WAJIB BIAR RESPONSIVE -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Egg Dashboard 🍳</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css?v=2">
+    <!-- version biar ke-refresh -->
+    <link rel="stylesheet" href="css/style.css?v=99">
 </head>
 <body>
 
@@ -30,14 +31,12 @@
         Good Evening, <span id="nameDisplay">Guest</span>
     </h2>
 
-    <!-- 🔥 FIX GROUP -->
     <div class="input-group">
         <input type="text" id="nameInput" placeholder="Your name..." />
         <button onclick="saveName()">Save</button>
     </div>
 </div>
 
-<!-- ROW -->
 <div class="row">
 
     <!-- TIMER -->
@@ -75,12 +74,12 @@
 <div class="card">
     <h2>🐥 Quick Links</h2>
 
+    <!-- 🔥 SUDAH DIPERBAIKI -->
     <div class="input-group">
         <input type="text" id="linkName" placeholder="Name">
         <input type="text" id="linkURL" placeholder="URL">
+        <button onclick="addLink()">✨ Add Link</button>
     </div>
-
-    <button onclick="addLink()">✨ Add Link</button>
 
     <div id="links"></div>
 </div>
