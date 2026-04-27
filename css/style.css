@@ -404,9 +404,64 @@ body.dark #themeToggle {
     }
 }
 
+@media (max-width: 768px) {
+
+    /* paksa semua input tidak ganggu layout */
+    input {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    button {
+        width: auto !important;
+    }
+
+    /* TIMER */
+    .timer-buttons {
+        display: flex !important;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .timer-buttons button {
+        min-width: 90px;
+    }
+
+    /* TASK CENTER */
+    #taskInput {
+        display: block;
+        margin: 0 auto 8px auto;
+        width: 80% !important;
+    }
+
+    .card button[onclick="addTask()"] {
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    #taskList {
+        text-align: center;
+    }
+
+    /* LINKS CENTER */
+    #linkName,
+    #linkURL {
+        display: block;
+        margin: 5px auto;
+        width: 80% !important;
+    }
+
+    .card button[onclick="addLink()"] {
+        display: block;
+        margin: 8px auto;
+    }
+
+    #links {
+        text-align: center;
+    }
+
     #links a {
         display: inline-flex;
-        justify-content: center;
-        align-items: center;
     }
 }
