@@ -320,7 +320,7 @@ body.dark #themeToggle {
 @media (max-width: 768px) {
 
     .main-title {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     #time {
@@ -402,9 +402,6 @@ body.dark #themeToggle {
         justify-content: center;
         align-items: center;
     }
-}
-
-@media (max-width: 768px) {
 
     /* paksa semua input tidak ganggu layout */
     input {
@@ -464,8 +461,6 @@ body.dark #themeToggle {
     #links a {
         display: inline-flex;
     }
-}
-@media (max-width: 768px) {
 
     /* =========================
        JAM (HARUS PALING MENONJOL)
@@ -501,5 +496,35 @@ body.dark #themeToggle {
     #clockCard button {
         width: auto !important;
         padding: 6px 10px;
+    }
+
+    body.dark {
+        background-color: #2f221d !important;
+        background-image: none !important;
+    }
+
+    body.dark .card {
+        background: #6b5043 !important;
+        color: #fff7ef !important;
+    }
+
+    body.dark .main-title {
+        background: #5b4338 !important;
+        color: #ffe2bf !important;
+    }
+
+    body.dark #themeToggle {
+        background: #ffe0ba !important;
+        color: #4a2a18 !important;
+    }
+
+    body.dark input {
+        background: #ffe7cc !important;
+        color: #3c2417 !important;
+    }
+
+    body.dark button {
+        background: linear-gradient(135deg,#efbf86,#d69155) !important;
+        color: #3c2417 !important;
     }
 }
