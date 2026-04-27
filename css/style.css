@@ -90,7 +90,6 @@ h2 {
         0 0 8px rgba(255,183,0,0.8);
 }
 
-/* 🔥 REVISI: perbesar angka clock */
 #time {
     font-size: 42px;
     font-weight: bold;
@@ -205,20 +204,20 @@ li {
 }
 
 /* =========================
-   GREETING (REVISI UKURAN)
+   🔥 GREETING FIX (INI YANG BARU)
 ========================= */
 
-#greeting {
+.card p {
     font-size: 18px;
     font-weight: 600;
 }
 
-#greeting #nameDisplay {
+.card p span {
     font-size: 18px;
     font-weight: 700;
 }
 
-#greeting input {
+.card input {
     font-size: 16px;
     padding: 10px;
 }
@@ -292,12 +291,6 @@ body.dark button {
 body.dark #links a {
     background: #7b5d4f !important;
     color: #fff0db !important;
-}
-
-/* Greeting + nama sama warna */
-body.dark #greeting,
-body.dark #greeting #nameDisplay {
-    color: #ffd8a0 !important;
 }
 
 body.dark #themeToggle {
