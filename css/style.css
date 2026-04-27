@@ -335,30 +335,60 @@ body.dark #themeToggle {
         font-size: 14px;
     }
 
-    /* 🔥 FIX UTAMA OFFSIDE */
+    /* =========================
+       ROW FIX
+    ========================= */
     .row {
         flex-direction: column !important;
     }
 
-    /* semua form jadi rapi full */
-    input,
-    button {
-        width: 100% !important;
-        display: block;
-        box-sizing: border-box;
-    }
-
-    input {
-        margin-bottom: 8px;
-    }
-
-    button {
-        margin-bottom: 8px;
-    }
-
-    /* timer buttons juga */
+    /* =========================
+       TIMER BUTTON (START STOP RESET) → SEJAJAR
+    ========================= */
     .timer-buttons {
-        flex-direction: column;
-        align-items: stretch;
+        flex-direction: row !important;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .timer-buttons button {
+        width: auto !important;
+        min-width: 90px;
+    }
+
+    /* =========================
+       TASK INPUT + ADD → CENTER
+    ========================= */
+    .task-input-group,
+    .input-group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .task-input-group input,
+    .input-group input {
+        width: 70% !important;
+        margin-bottom: 0;
+    }
+
+    .task-input-group button,
+    .input-group button {
+        width: auto !important;
+    }
+
+    /* =========================
+       QUICK LINKS → CENTER
+    ========================= */
+    #links {
+        text-align: center;
+    }
+
+    #links a {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 }
