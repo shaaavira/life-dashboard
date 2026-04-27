@@ -449,3 +449,58 @@ body.dark #themeToggle {
         margin: 5px 0;
     }
 }
+/* =========================
+   📱 MOBILE COMPACT FIX (ESTETIK)
+========================= */
+
+@media (max-width: 768px) {
+
+    /* card lebih compact */
+    .card {
+        padding: 12px !important;
+        margin-bottom: 12px;
+    }
+
+    /* judul */
+    h2 {
+        font-size: 14px;
+    }
+
+    /* clock biar ga terlalu gede */
+    #time {
+        font-size: 32px;
+    }
+
+    /* greeting */
+    #greeting {
+        font-size: 16px;
+    }
+
+    /* input lebih slim */
+    input {
+        width: 100%;
+        padding: 10px;
+        font-size: 15px;
+        margin: 6px 0;
+    }
+
+    /* 🔥 BUTTON FIX (INI YANG PALING NGARUH) */
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 12px;
+        margin-top: 5px;
+    }
+
+    /* timer buttons biar ga gede-gede */
+    .timer-buttons button {
+        padding: 9px;
+        font-size: 14px;
+    }
+
+    /* jarak antar tombol */
+    .timer-buttons {
+        gap: 5px;
+    }
+}
