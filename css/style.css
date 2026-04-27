@@ -179,3 +179,97 @@ body.dark button {
     background: #444;
     color: white;
 }
+/* =======================
+   DARK MODE ESTHETIC
+======================= */
+
+body.dark {
+    background: linear-gradient(135deg, #2b2118, #3a2c22, #1f1712);
+    color: #fff8ef;
+}
+
+body.dark .container {
+    color: #fff8ef;
+}
+
+body.dark .main-title {
+    color: #ffe8b0;
+}
+
+body.dark .card {
+    background: rgba(255, 248, 239, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+    color: #fff8ef;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark p,
+body.dark li,
+body.dark span {
+    color: #fff8ef;
+}
+
+body.dark input {
+    background: rgba(255,255,255,0.08);
+    color: #fff8ef;
+    border: 1px solid rgba(255,255,255,0.12);
+}
+
+body.dark input::placeholder {
+    color: #d8cbbd;
+}
+
+body.dark button {
+    background: #f6c65b;
+    color: #3b2a12;
+    border: none;
+    font-weight: 600;
+}
+
+body.dark button:hover {
+    background: #ffd97b;
+    transform: translateY(-2px);
+    transition: 0.2s ease;
+}
+
+body.dark a {
+    color: #ffe08a;
+}
+
+body.dark #themeToggle {
+    background: #fff3cf;
+    color: #3b2a12;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* =======================
+   THEME BUTTON POSITION
+======================= */
+
+#themeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    background: #fff4c9;
+    color: #5a3d00;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+    transition: all 0.25s ease;
+}
+
+#themeToggle:hover {
+    transform: translateY(-2px) scale(1.05);
+}
