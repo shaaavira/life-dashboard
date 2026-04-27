@@ -12,6 +12,7 @@ window.onload = function () {
 
     document.getElementById("themeToggle").onclick = toggleTheme;
 };
+
 // =======================
 // SAVE NAME
 // =======================
@@ -215,7 +216,10 @@ function renderTasks() {
         });
 
         let span = document.createElement("span");
-        span.innerText = getEmoji(task.text) + " " + task.text;
+
+        const emoji = getEmoji(task.text);
+
+        span.innerText = emoji + " " + task.text;
 
         span.onclick = () => toggleTask(index);
         span.ondblclick = () => editTask(index);
@@ -282,7 +286,10 @@ function renderLinks() {
 
         let a = document.createElement("a");
         a.href = link.url;
-        a.innerText = "🐣 " + link.name;
+
+        const isDark = document.body.classList.contains("dark");
+        a.innerText = (isDark ? "☕ " : "🐣 ") + link.name;
+
         a.target = "_blank";
 
         let delBtn = document.createElement("button");
@@ -310,6 +317,8 @@ function loadTheme() {
     }
 
     updateThemeIcon();
+    updateThemeText();
+    updateThemeEmoji();
 }
 
 function toggleTheme() {
@@ -322,6 +331,42 @@ function toggleTheme() {
     }
 
     updateThemeIcon();
+    updateThemeText();
+    updateThemeEmoji();
+}
+
+// 🔥 COFFEE TITLE
+function updateThemeText() {
+    const title = document.getElementById("mainTitle");
+
+    if (!title) return;
+
+    if (document.body.classList.contains("dark")) {
+        title.innerText = "Hello, Sweet Coffee ☕🤎";
+    } else {
+        title.innerText = "Hello, Egg-cellent friend 🫶🏻🐣";
+    }
+}
+
+// 🔥 COZY EMOJI
+function updateThemeEmoji() {
+    const isDark = document.body.classList.contains("dark");
+
+    const timerTitle = document.querySelector(".timer-card h2");
+    const taskTitle = document.querySelectorAll(".card h2")[2];
+    const linkTitle = document.querySelectorAll(".card h2")[3];
+
+    if (timerTitle) {
+        timerTitle.innerText = isDark ? "☕ Coffee Focus" : "🍳 Focus Timer";
+    }
+
+    if (taskTitle) {
+        taskTitle.innerText = isDark ? "🧸 Cozy Tasks" : "🌻 Tasks";
+    }
+
+    if (linkTitle) {
+        linkTitle.innerText = isDark ? "🌰 Quick Links" : "🐥 Quick Links";
+    }
 }
 
 function updateThemeIcon() {
