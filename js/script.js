@@ -324,4 +324,3 @@ renderLinks();
 
     const btn = document.getElementById("themeToggle");
     if (btn) btn.addEventListener("click", toggleTheme);
-});
