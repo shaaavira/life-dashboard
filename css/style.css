@@ -403,22 +403,60 @@ body.dark #themeToggle {
         align-items: center;
     }
 }
-
 @media (max-width: 768px) {
 
-    /* paksa semua input tidak ganggu layout */
-    input {
-        width: 100% !important;
-        box-sizing: border-box;
+    /* =========================
+       LAYOUT
+    ========================= */
+    .row {
+        flex-direction: column !important;
     }
 
-    button {
+    /* =========================
+       JAM & DATE
+    ========================= */
+    #time {
+        font-size: 34px !important;
+        font-weight: 800;
+    }
+
+    #date {
+        font-size: 12px;
+    }
+
+    /* =========================
+       GREETING
+    ========================= */
+    #greeting {
+        font-size: 12px !important;
+        font-weight: 500;
+    }
+
+    #nameDisplay {
+        font-size: 14px !important;
+        font-weight: 600;
+    }
+
+    /* =========================
+       INPUT NAME (CLOCK CARD)
+    ========================= */
+    #nameInput {
+        width: 60% !important;
+        font-size: 14px;
+        display: block;
+        margin: 0 auto 8px auto;
+    }
+
+    #clockCard button {
         width: auto !important;
+        padding: 6px 10px;
     }
 
-    /* TIMER */
+    /* =========================
+       TIMER BUTTON
+    ========================= */
     .timer-buttons {
-        display: flex !important;
+        display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 8px;
@@ -426,13 +464,16 @@ body.dark #themeToggle {
 
     .timer-buttons button {
         min-width: 90px;
+        width: auto !important;
     }
 
-    /* TASK CENTER */
+    /* =========================
+       TASK INPUT + LIST
+    ========================= */
     #taskInput {
+        width: 80% !important;
         display: block;
         margin: 0 auto 8px auto;
-        width: 80% !important;
     }
 
     .card button[onclick="addTask()"] {
@@ -444,12 +485,14 @@ body.dark #themeToggle {
         text-align: center;
     }
 
-    /* LINKS CENTER */
+    /* =========================
+       QUICK LINKS INPUT
+    ========================= */
     #linkName,
     #linkURL {
+        width: 80% !important;
         display: block;
         margin: 5px auto;
-        width: 80% !important;
     }
 
     .card button[onclick="addLink()"] {
@@ -463,43 +506,7 @@ body.dark #themeToggle {
 
     #links a {
         display: inline-flex;
-    }
-}
-@media (max-width: 768px) {
-
-    /* =========================
-       JAM (HARUS PALING MENONJOL)
-    ========================= */
-    #time {
-        font-size: 34px !important;
-        font-weight: 800;
-    }
-
-    /* =========================
-       GREETING / MY FRIEND (LEBIH KECIL)
-    ========================= */
-    #greeting {
-        font-size: 12px !important;
-        font-weight: 500;
-    }
-
-    #nameDisplay {
-        font-size: 14px !important;
-        font-weight: 600;
-    }
-
-    /* =========================
-       INPUT NAME (DIPERKECIL)
-    ========================= */
-    #nameInput {
-        width: 60% !important;
-        padding: 6px;
-        font-size: 14px;
-    }
-
-    /* tombol Save biar seimbang */
-    #clockCard button {
-        width: auto !important;
-        padding: 6px 10px;
+        justify-content: center;
+        align-items: center;
     }
 }
