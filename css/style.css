@@ -1,5 +1,5 @@
 /* =========================
-   BASE (LIGHT MODE 🥚)
+   BASE (LIGHT MODE 🥚 SOFT)
 ========================= */
 
 body {
@@ -9,7 +9,7 @@ body {
     position: relative;
 }
 
-/* layer 1 telur */
+/* 🥚 pattern layer 1 */
 body::before {
     content: "";
     position: fixed;
@@ -17,14 +17,16 @@ body::before {
     z-index: -1;
     pointer-events: none;
 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ff9aa2'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ff9aa2'/%3E%3Cpath d='M52 67 Q60 78 68 67 Z' fill='%233c2417'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffe8a3'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ffb3ba'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ffb3ba'/%3E%3Cpath d='M52 67 Q60 78 68 67 Z' fill='%233c2417'/%3E%3C/svg%3E");
 
-    background-size: 75px 75px;
+    background-size: 90px 90px;
     background-repeat: repeat;
     background-position: 0 0;
+
+    opacity: 0.15;
 }
 
-/* layer 2 telur (offset biar ga kaku) */
+/* 🥚 layer 2 (biar ga grid kaku) */
 body::after {
     content: "";
     position: fixed;
@@ -32,12 +34,13 @@ body::after {
     z-index: -1;
     pointer-events: none;
 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffd166'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ff9aa2'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ff9aa2'/%3E%3Cpath d='M52 67 Q60 78 68 67 Z' fill='%233c2417'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M28 60 C28 40 45 30 60 32 C80 30 95 45 92 65 C88 90 60 95 45 85 C30 78 28 70 28 60 Z' fill='%23fff8dc'/%3E%3Ccircle cx='60' cy='60' r='15' fill='%23ffe8a3'/%3E%3Ccircle cx='54' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='66' cy='55' r='3' fill='%233c2417'/%3E%3Ccircle cx='47' cy='66' r='3' fill='%23ffb3ba'/%3E%3Ccircle cx='73' cy='66' r='3' fill='%23ffb3ba'/%3E%3Cpath d='M52 67 Q60 78 68 67 Z' fill='%233c2417'/%3E%3C/svg%3E");
 
-    background-size: 75px 75px;
+    background-size: 90px 90px;
     background-repeat: repeat;
-    background-position: 40px 50px;
-    opacity: 0.5;
+    background-position: 55px 65px;
+
+    opacity: 0.07;
 }
 
 /* =========================
@@ -78,7 +81,7 @@ body::after {
     border-radius: 18px;
     padding: 12px;
     margin-bottom: 10px;
-    box-shadow: 0 6px 12px rgba(255,180,0,0.20);
+    box-shadow: 0 6px 12px rgba(255,180,0,0.12);
     transition: 0.3s;
 }
 
@@ -137,16 +140,14 @@ button {
 }
 
 /* =========================
-   THEME BUTTON (FIX KANAN)
+   THEME BUTTON (KANAN ATAS)
 ========================= */
 
 #themeToggle {
     position: fixed;
     top: 20px;
-
     right: 20px !important;
     left: auto !important;
-
     z-index: 9999;
 
     width: 48px;
@@ -162,27 +163,88 @@ button {
 }
 
 /* =========================
-   DARK MODE ☕
+   DARK MODE ☕ COZY
 ========================= */
 
 body.dark {
     background-color: #2f221d;
+    color: #f5e6d8;
+}
+
+/* ☕ pattern layer 1 */
+body.dark::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg stroke='%235f463a' fill='none' stroke-width='2'%3E%3Crect x='50' y='70' width='60' height='40' rx='12'/%3E%3Cpath d='M110 80 q20 0 20 15 q0 15 -20 15'/%3E%3Cpath d='M65 60 q5 -10 10 0'/%3E%3Cpath d='M80 60 q5 -10 10 0'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size: 140px 140px;
+    background-repeat: repeat;
+    background-position: 0 0;
+
+    opacity: 0.15;
+}
+
+/* ☕ pattern layer 2 */
+body.dark::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cg stroke='%235f463a' fill='none' stroke-width='2'%3E%3Crect x='50' y='70' width='60' height='40' rx='12'/%3E%3Cpath d='M110 80 q20 0 20 15 q0 15 -20 15'/%3E%3Cpath d='M65 60 q5 -10 10 0'/%3E%3Cpath d='M80 60 q5 -10 10 0'/%3E%3C/g%3E%3C/svg%3E");
+
+    background-size: 140px 140px;
+    background-repeat: repeat;
+    background-position: 70px 80px;
+
+    opacity: 0.07;
+}
+
+/* CARD DARK */
+body.dark .card {
+    background: #5b4338;
+    color: #f5e6d8;
+}
+
+/* TITLE DARK */
+body.dark .main-title {
+    background: #5b4338;
+    color: #ffd8a0;
+}
+
+/* TEXT DARK */
+body.dark h1,
+body.dark h2,
+body.dark p,
+body.dark span,
+body.dark li,
+body.dark a,
+body.dark label {
+    color: #f5e6d8;
+}
+
+body.dark h2 {
+    color: #ffd8a0;
+}
+
+/* LIST DARK */
+body.dark li {
+    background: #6b5043;
+}
+
+/* INPUT DARK */
+body.dark input {
+    background: #f0d9c2;
+    color: #3c2417;
+}
+
+/* BUTTON DARK */
+body.dark button {
+    background: linear-gradient(135deg,#c08a5b,#8b5e3c);
     color: #fff7ef;
 }
 
-/* kopi layer 1 */
-body.dark::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cg stroke='%235f463a' fill='none' stroke-width='3'%3E%3Crect x='40' y='72' width='44' height='28' rx='7'/%3E%3Cpath d='M84 80 h10 a8 8 0 1 1 0 14 h-10'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 110px 110px;
-    background-repeat: repeat;
-    background-position: 0 0;
+/* LINKS DARK */
+body.dark #links a {
+    background: #6b5043;
+    color: #fff0db;
 }
 
-/* kopi layer 2 offset */
-body.dark::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cg stroke='%235f463a' fill='none' stroke-width='3'%3E%3Crect x='40' y='72' width='44' height='28' rx='7'/%3E%3Cpath d='M84 80 h10 a8 8 0 1 1 0 14 h-10'/%3E%3C/g%3E%3C/svg%3E");
-    background-size: 110px 110px;
-    background-repeat: repeat;
-    background-position: 50px 60px;
-    opacity: 0.5;
+/* THEME BUTTON DARK */
+body.dark #themeToggle {
+    background: #d6a77a;
+    color: #3c2417;
 }
