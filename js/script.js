@@ -24,7 +24,7 @@ function saveName() {
         updateTime();
         setTimeout(() => {
             animateGreeting();
-        }, 50);
+        }, 120);
     }
 }
 function updateTime() {
@@ -388,25 +388,35 @@ document.addEventListener("keydown", function (e) {
 
 function animateGreeting() {
     const greet = document.getElementById("greeting");
-
     if (!greet) return;
 
-    // animasi pop lebih stabil (tidak tergantung nameDisplay)
+    const originalHTML = greet.innerHTML;
+
+    let sparkles = ["✨", "💫", "✨"];
+
     greet.animate([
         { transform: "scale(1)", opacity: 1 },
-        { transform: "scale(1.06)", opacity: 0.7 },
+        { transform: "scale(1.15)", opacity: 0.6 },
+        { transform: "scale(0.98)", opacity: 1 },
+        { transform: "scale(1.05)", opacity: 1 },
         { transform: "scale(1)", opacity: 1 }
     ], {
-        duration: 350,
+        duration: 650,
         easing: "ease-out"
     });
 
-    // efek sparkle sementara tanpa ganggu DOM
-    const originalHTML = greet.innerHTML;
+    let i = 0;
 
-    greet.innerHTML = originalHTML + " ✨";
+    const interval = setInterval(() => {
+        greet.innerHTML = originalHTML + " " + sparkles[i];
+        i++;
 
-    setTimeout(() => {
-        greet.innerHTML = originalHTML;
-    }, 500);
+        if (i >= sparkles.length) {
+            clearInterval(interval);
+
+            setTimeout(() => {
+                greet.innerHTML = originalHTML;
+            }, 400);
+        }
+    }, 180);
 }
