@@ -30,10 +30,8 @@ body {
     flex: 1.2;
 }
 
-@media (max-width:768px) {
-    .row {
-        flex-direction: column;
-    }
+.row {
+    flex-direction: column;
 }
 
 /* =========================
