@@ -446,3 +446,12 @@ function celebrateName() {
         colors
     });
 }
+function playSound() {
+    const sound = document.getElementById("celebratePopsound");
+    if (!sound) return;
+
+    sound.pause();
+    sound.currentTime = 0;
+
+    sound.play().catch(() => {});
+}
