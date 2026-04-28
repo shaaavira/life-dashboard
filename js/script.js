@@ -386,6 +386,7 @@ document.addEventListener("keydown", function (e) {
 
 function saveName() {
     const input = document.getElementById("nameInput").value;
+    console.log(document.getElementById("celebratePopsound"));
 
     if (input.trim() !== "") {
 
