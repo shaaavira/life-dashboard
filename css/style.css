@@ -7,10 +7,6 @@ body {
     transition: 0.3s;
 }
 
-/* =========================
-   LAYOUT
-========================= */
-
 .container {
     max-width: 650px;
     margin: auto;
@@ -35,10 +31,6 @@ body {
         flex-direction: column;
     }
 }
-
-/* =========================
-   CARD
-========================= */
 
 .card {
     background: #fff8dc;
@@ -65,10 +57,6 @@ body {
         2px 2px 0 #fff,
         0 0 10px rgba(255,183,0,0.6);
 }
-
-/* =========================
-   TEXT
-========================= */
 
 h1 {
     font-size: 25px;
@@ -102,10 +90,6 @@ h2 {
     text-align: center;
 }
 
-/* =========================
-   FORM
-========================= */
-
 input {
     padding: 8px;
     border-radius: 12px;
@@ -129,10 +113,6 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* =========================
-   LIST
-========================= */
-
 ul {
     padding: 0;
 }
@@ -146,10 +126,6 @@ li {
     display: flex;
     justify-content: space-between;
 }
-
-/* =========================
-   LINKS
-========================= */
 
 #links a {
     display: inline-block;
@@ -167,20 +143,12 @@ li {
     gap: 5px;
 }
 
-/* =========================
-   TIMER BUTTONS
-========================= */
-
 .timer-buttons {
     display: flex;
     justify-content: center;
     gap: 8px;
     margin-top: 10px;
 }
-
-/* =========================
-   THEME BUTTON
-========================= */
 
 #themeToggle {
     position: fixed;
@@ -203,10 +171,6 @@ li {
     transform: scale(1.08);
 }
 
-/* =========================
-   ✅ GREETING (KHUSUS)
-========================= */
-
 #greeting {
     font-size: 18px;
     font-weight: 600;
@@ -222,10 +186,6 @@ li {
     padding: 10px;
 }
 
-/* =========================
-   ✅ FIX JARAK JAM & TANGGAL
-========================= */
-
 #time,
 #date {
     margin: 0;
@@ -235,10 +195,6 @@ li {
 #time {
     margin-bottom: 2px;
 }
-
-/* =========================
-   DARK MODE MOCHA ☕🤎
-========================= */
 
 body.dark {
     background-color: #2f221d !important;
@@ -334,25 +290,18 @@ body.dark #themeToggle {
     #greeting {
         font-size: 14px;
     }
-    /* =========================
-       TIMER INPUT FIX (BIAR TIDAK PANJANG)
-    ========================= */
+
     #customMinutes {
         width: 60% !important;
         max-width: 140px;
         display: block;
         margin: 0 auto;
-    }    
-    /* =========================
-       ROW FIX
-    ========================= */
+    }
+
     .row {
         flex-direction: column !important;
     }
 
-    /* =========================
-       TIMER BUTTON (START STOP RESET)
-    ========================= */
     .timer-buttons {
         flex-direction: row !important;
         justify-content: center;
@@ -364,9 +313,6 @@ body.dark #themeToggle {
         min-width: 90px;
     }
 
-    /* =========================
-       TASK CENTER FIX (INI YANG SEBELUMNYA GAGAL)
-    ========================= */
     #taskInput {
         display: block;
         margin: 0 auto 8px auto;
@@ -384,9 +330,6 @@ body.dark #themeToggle {
         text-align: center;
     }
 
-    /* =========================
-       QUICK LINKS CENTER FIX
-    ========================= */
     #linkName,
     #linkURL {
         display: block;
@@ -410,7 +353,7 @@ body.dark #themeToggle {
         justify-content: center;
         align-items: center;
     }
-    /* TASK INPUT */
+
     #taskInput {
         width: 80% !important;
         max-width: 280px;
@@ -418,7 +361,6 @@ body.dark #themeToggle {
         margin: 5px auto;
     }
 
-    /* QUICK LINK INPUT */
     #linkName,
     #linkURL {
         width: 80% !important;
@@ -427,18 +369,15 @@ body.dark #themeToggle {
         margin: 5px auto;
     }
 
-    /* TIMER INPUT (tetap kecil) */
     #customMinutes {
         width: 70px !important;
         text-align: center;
     }
 
-    /* tombol tetap aman */
     button {
         width: auto !important;
     }
 
-    /* TIMER */
     .timer-buttons {
         display: flex !important;
         justify-content: center;
@@ -450,7 +389,6 @@ body.dark #themeToggle {
         min-width: 80px;
     }
 
-    /* TASK CENTER */
     #taskInput {
         display: block;
         margin: 0 auto 8px auto;
@@ -466,7 +404,6 @@ body.dark #themeToggle {
         text-align: center;
     }
 
-    /* LINKS CENTER */
     #linkName,
     #linkURL {
         display: block;
@@ -487,17 +424,11 @@ body.dark #themeToggle {
         display: inline-flex;
     }
 
-    /* =========================
-       JAM (HARUS PALING MENONJOL)
-    ========================= */
     #time {
         font-size: 34px !important;
         font-weight: 800;
     }
 
-    /* =========================
-       GREETING / MY FRIEND (LEBIH KECIL)
-    ========================= */
     #greeting {
         font-size: 12px !important;
         font-weight: 500;
@@ -508,16 +439,12 @@ body.dark #themeToggle {
         font-weight: 600;
     }
 
-    /* =========================
-       INPUT NAME (DIPERKECIL)
-    ========================= */
     #nameInput {
         width: 60% !important;
         padding: 6px;
         font-size: 14px;
     }
 
-    /* tombol Save biar seimbang */
     #clockCard button {
         width: auto !important;
         padding: 6px 10px;
@@ -552,25 +479,23 @@ body.dark #themeToggle {
         background: linear-gradient(135deg,#efbf86,#d69155) !important;
         color: #3c2417 !important;
     }
-    @media (max-width: 768px) {
 
-  /* TASK INPUT */
-  #taskInput {
-    width: 75% !important;
-    max-width: 280px;
-    display: block;
-    margin: 6px auto;
-  }
-  /* QUICK LINK INPUT */
-  #linkName,
-  #linkURL {
-    width: 75% !important;
-    max-width: 280px;
-    display: block;
-    margin: 6px auto;
-  }
-  /* JANGAN paksa semua input full */
-  input {
-    width: auto !important;
-  }
+    #taskInput {
+        width: 75% !important;
+        max-width: 280px;
+        display: block;
+        margin: 6px auto;
+    }
+
+    #linkName,
+    #linkURL {
+        width: 75% !important;
+        max-width: 280px;
+        display: block;
+        margin: 6px auto;
+    }
+
+    input {
+        width: auto !important;
+    }
 }
