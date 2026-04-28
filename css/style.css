@@ -572,18 +572,28 @@ body.dark #themeToggle {
   /* JANGAN paksa semua input full */
   input {
     width: auto !important;
-  }
-    #customMinutes {
-    width: 70px;
-    text-align: center;
-  }
+      }
+    .timer-set {
+        gap: 6px;
+    }
+    
+    .timer-set input {
+        width: 70px;
+    }
 }
 .timer-set {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center; /* biar tetap tengah di desktop */
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.timer-set input {
+    width: 80px;
+    text-align: center;
+}
+
+.timer-set button {
+    margin: 0;
 }
