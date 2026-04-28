@@ -389,11 +389,14 @@ function saveName() {
 
     if (input.trim() !== "") {
 
-        const sound = document.getElementById("celebratePopsound");
+        const sound = document.getElementById("popSound");
         if (sound) {
+            sound.pause();
             sound.currentTime = 0;
-            sound.volume = 0.6;
-            sound.play().catch(() => {});
+
+            sound.play()
+                .then(() => console.log("sound ok"))
+                .catch(err => console.log("sound blocked", err));
         }
 
         userName = input;
@@ -402,7 +405,7 @@ function saveName() {
         document.getElementById("nameDisplay").innerText = userName;
         updateTime();
 
-        celebrateName(); 
+        celebrateName();
     }
 }
 function celebrateName() {
