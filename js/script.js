@@ -385,19 +385,21 @@ document.addEventListener("keydown", function (e) {
 });
 
 function saveName() {
-    const input = document.getElementById("nameInput").value;
+    const sound = document.getElementById("popSound");
 
-    if (input.trim() !== "") {
+if (sound) {
+    sound.pause();
+    sound.currentTime = 0;
+    sound.volume = 0.7;
 
-        const sound = document.getElementById("popSound");
-        if (sound) {
-            sound.pause();
-            sound.currentTime = 0;
+    const playPromise = sound.play();
 
-            sound.play()
-                .then(() => console.log("sound ok"))
-                .catch(err => console.log("sound blocked", err));
-        }
+    if (playPromise !== undefined) {
+        playPromise.catch(err => {
+            console.log("audio blocked:", err);
+        });
+    }
+}
 
         userName = input;
         localStorage.setItem("username", userName);
@@ -446,3 +448,13 @@ function celebrateName() {
         colors
     });
 }
+
+document.addEventListener("click", () => {
+    const sound = document.getElementById("popSound");
+    if (sound) {
+        sound.play().then(() => {
+            sound.pause();
+            sound.currentTime = 0;
+        }).catch(() => {});
+    }
+}, { once: true });
