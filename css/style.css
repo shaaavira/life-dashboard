@@ -30,13 +30,10 @@ body {
     flex: 1.2;
 }
 
-.row {
-    display: flex;
-    gap: 15px;
-}
-.container {
-    max-width: 650px;
-    margin: 0 auto;
+@media (max-width:768px) {
+    .row {
+        flex-direction: column;
+    }
 }
 
 /* =========================
@@ -350,7 +347,7 @@ body.dark #themeToggle {
        ROW FIX
     ========================= */
     .row {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 
     /* =========================
@@ -555,6 +552,8 @@ body.dark #themeToggle {
         background: linear-gradient(135deg,#efbf86,#d69155) !important;
         color: #3c2417 !important;
     }
+    @media (max-width: 768px) {
+
   /* TASK INPUT */
   #taskInput {
     width: 75% !important;
@@ -573,28 +572,5 @@ body.dark #themeToggle {
   /* JANGAN paksa semua input full */
   input {
     width: auto !important;
-      }
-    .timer-set {
-        gap: 6px;
-    }
-    
-    .timer-set input {
-        width: 70px;
-    }
-}
-.timer-set {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin-top: 15px;
-}
-
-.timer-set input {
-    width: 80px;
-    text-align: center;
-}
-
-.timer-set button {
-    margin: 0;
+  }
 }
