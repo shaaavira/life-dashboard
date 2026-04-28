@@ -151,8 +151,9 @@ function getEmoji(text) {
     if (text.includes("rebus telur")) return "🥚";
     if (text.includes("masak telur")) return "🍳";
     if (text.includes("goreng telur")) return "🍳";
+    if (text.includes("masak")) return "🥘";
     if (text.includes("belajar")) return "📚";
-    if (text.includes("makan")) return "🍳";
+    if (text.includes("makan")) return "🍜";
     if (text.includes("tidur")) return "😴";
     if (text.includes("kerja") || text.includes("tugas")) return "💻";
     if (text.includes("bersih")) return "🧹";
@@ -342,7 +343,7 @@ function updateThemeText() {
     if (!title) return;
 
     if (document.body.classList.contains("dark")) {
-        title.innerText = "Hello, Sweet Coffee ☕🤎";
+        title.innerText = "Hello, Latte-lly amazing ☕🤎";
     } else {
         title.innerText = "Hello, Egg-cellent friend 🫶🏻🐣";
     }
