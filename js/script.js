@@ -390,7 +390,7 @@ function saveName() {
 
     if (input.trim() !== "") {
 
-        const sound = document.getElementById("popSound");
+        const sound = document.getElementById("celebratePopsound");
         if (sound) {
             sound.pause();
             sound.currentTime = 0;
