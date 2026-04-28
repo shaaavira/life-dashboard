@@ -81,6 +81,9 @@ h2 {
 #time {
     font-size: 42px;
     font-weight: bold;
+    margin: 0;
+    line-height: 1.1;
+    margin-bottom: 2px;
 }
 
 #date {
@@ -88,6 +91,8 @@ h2 {
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+    margin: 0;
+    line-height: 1.1;
 }
 
 input {
@@ -128,13 +133,15 @@ li {
 }
 
 #links a {
-    display: inline-block;
+    display: inline-flex;
     margin: 5px;
     padding: 8px 15px;
     border-radius: 999px;
     background: #fff3b0;
     color: #5a3d00;
     text-decoration: none;
+    justify-content: center;
+    align-items: center;
 }
 
 .link-item {
@@ -184,16 +191,6 @@ li {
 #nameInput {
     font-size: 16px;
     padding: 10px;
-}
-
-#time,
-#date {
-    margin: 0;
-    line-height: 1.1;
-}
-
-#time {
-    margin-bottom: 2px;
 }
 
 body.dark {
@@ -296,6 +293,7 @@ body.dark #themeToggle {
         max-width: 140px;
         display: block;
         margin: 0 auto;
+        text-align: center;
     }
 
     .row {
@@ -306,6 +304,7 @@ body.dark #themeToggle {
         flex-direction: row !important;
         justify-content: center;
         flex-wrap: wrap;
+        gap: 8px;
     }
 
     .timer-buttons button {
@@ -313,37 +312,24 @@ body.dark #themeToggle {
         min-width: 90px;
     }
 
-    #taskInput {
-        display: block;
-        margin: 0 auto 8px auto;
-        width: 80% !important;
-        text-align: center;
-    }
-
-    .card button[onclick="addTask()"] {
-        display: block;
-        margin: 0 auto 10px auto;
-        width: auto !important;
-    }
-
-    #taskList {
-        text-align: center;
-    }
-
+    #taskInput,
     #linkName,
     #linkURL {
+        width: 80% !important;
+        max-width: 280px;
         display: block;
         margin: 5px auto;
-        width: 80% !important;
         text-align: center;
     }
 
+    .card button[onclick="addTask()"],
     .card button[onclick="addLink()"] {
         display: block;
         margin: 8px auto;
         width: auto !important;
     }
 
+    #taskList,
     #links {
         text-align: center;
     }
@@ -352,76 +338,6 @@ body.dark #themeToggle {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-    }
-
-    #taskInput {
-        width: 80% !important;
-        max-width: 280px;
-        display: block;
-        margin: 5px auto;
-    }
-
-    #linkName,
-    #linkURL {
-        width: 80% !important;
-        max-width: 280px;
-        display: block;
-        margin: 5px auto;
-    }
-
-    #customMinutes {
-        width: 70px !important;
-        text-align: center;
-    }
-
-    button {
-        width: auto !important;
-    }
-
-    .timer-buttons {
-        display: flex !important;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-
-    .timer-buttons button {
-        min-width: 80px;
-    }
-
-    #taskInput {
-        display: block;
-        margin: 0 auto 8px auto;
-        width: 80% !important;
-    }
-
-    .card button[onclick="addTask()"] {
-        display: block;
-        margin: 0 auto 10px auto;
-    }
-
-    #taskList {
-        text-align: center;
-    }
-
-    #linkName,
-    #linkURL {
-        display: block;
-        margin: 5px auto;
-        width: 80% !important;
-    }
-
-    .card button[onclick="addLink()"] {
-        display: block;
-        margin: 8px auto;
-    }
-
-    #links {
-        text-align: center;
-    }
-
-    #links a {
-        display: inline-flex;
     }
 
     #time {
@@ -451,18 +367,15 @@ body.dark #themeToggle {
     }
 
     body.dark {
-        background-color: #2f221d !important;
         background-image: none !important;
     }
 
     body.dark .card {
         background: #6b5043 !important;
-        color: #fff7ef !important;
     }
 
     body.dark .main-title {
         background: #5b4338 !important;
-        color: #ffe2bf !important;
     }
 
     body.dark #themeToggle {
@@ -478,21 +391,6 @@ body.dark #themeToggle {
     body.dark button {
         background: linear-gradient(135deg,#efbf86,#d69155) !important;
         color: #3c2417 !important;
-    }
-
-    #taskInput {
-        width: 75% !important;
-        max-width: 280px;
-        display: block;
-        margin: 6px auto;
-    }
-
-    #linkName,
-    #linkURL {
-        width: 75% !important;
-        max-width: 280px;
-        display: block;
-        margin: 6px auto;
     }
 
     input {
